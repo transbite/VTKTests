@@ -27,7 +27,8 @@ public:
 	}
 };
 
-VtkTestWindow::VtkTestWindow()
+VtkTestWindow::VtkTestWindow(QWidget* parent)
+	: QVTKWidget(parent)
 {
 	vtkAxesActor* axes = vtkAxesActor::New();
 	axes->SetScale(3.0);

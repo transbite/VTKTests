@@ -38,14 +38,14 @@ message("VTK use file: " ${VTK_USE_FILE})
 ##    message("- " ${flag})
 ##endforeach(flag)
 
-set(SRCS main.cpp mainwindow.cpp)
+set(SRCS main.cpp mainwindow.cpp VtkTestWindow.cpp)
 set(FRMS mainwindow.ui)
 
 qt5_wrap_ui(FRMS_HDRS ${FRMS})
 
 add_executable(VTKTests ${SRCS} ${FRMS_HDRS})
 
-#target_link_libraries(VTKTests ${VTK_LIBRARIES})
+target_link_libraries(VTKTests ${VTK_LIBRARIES})
 
 ##target_link_libraries(VTKTests ${Qt5Widgets_LIBRARIES})
 ##target_link_libraries(VTKTests ${Qt5OpenGL_LIBRARIES})

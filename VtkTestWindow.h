@@ -5,7 +5,7 @@
 class VtkTestWindow : public QVTKWidget
 {
 public:
-	VtkTestWindow();
+	VtkTestWindow(QWidget* parent = nullptr);
 	~VtkTestWindow();
 
 };

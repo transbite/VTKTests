@@ -11,6 +11,7 @@
 #include "vtkBoxWidget.h"
 #include "vtkTransform.h"
 #include "vtkAxesActor.h"
+#include "vtkCommand.h"
 
 class vtkMyCallback : public vtkCommand
 {
@@ -28,7 +29,7 @@ public:
 };
 
 VtkTestWindow::VtkTestWindow(QWidget* parent)
-	: QVTKWidget(parent)
+    : QVTKWidget(parent)
 {
 	vtkAxesActor* axes = vtkAxesActor::New();
 	axes->SetScale(3.0);
@@ -70,31 +71,29 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
 	vtkRenderWindow* renWin = this->GetRenderWindow();
 	renWin->AddRenderer(ren1);
 
-	vtkRenderWindowInteractor *iren = vtkRenderWindowInteractor::New();
-	iren->SetRenderWindow(renWin);
+    vtkRenderWindowInteractor *iren = renWin->GetInteractor();//vtkRenderWindowInteractor::New();
+    //iren->SetRenderWindow(renWin);
 
-	vtkInteractorStyleTrackballCamera *style =
-		vtkInteractorStyleTrackballCamera::New();
-// 	vtkInteractorStyle *style =
-// 		vtkInteractorStyle::New();
+    vtkInteractorStyleTrackballCamera *style = vtkInteractorStyleTrackballCamera::New();
+    //vtkInteractorStyle *style = vtkInteractorStyle::New();
 
- 	iren->SetInteractorStyle(style);
+    iren->SetInteractorStyle(style);
 	
-	vtkBoxWidget *boxWidget = vtkBoxWidget::New();
-	boxWidget->SetInteractor(iren);
-	boxWidget->SetPlaceFactor(1.0);
+    vtkBoxWidget *boxWidget = vtkBoxWidget::New();
+    boxWidget->SetInteractor(iren);
+    boxWidget->SetPlaceFactor(1.0);
 
-	boxWidget->SetProp3D(coneActor);
-	boxWidget->PlaceWidget();
+    boxWidget->SetProp3D(coneActor);
+    boxWidget->PlaceWidget();
 
-	vtkMyCallback *callback = vtkMyCallback::New();
-	boxWidget->AddObserver(vtkCommand::InteractionEvent, callback);
+    vtkMyCallback *callback = vtkMyCallback::New();
+    boxWidget->AddObserver(vtkCommand::InteractionEvent, callback);
 
-	boxWidget->On();
+    boxWidget->On();
 
- 	this->setGeometry(this->pos().x(), this->pos().y(), 500, 500);
+    this->setGeometry(this->pos().x(), this->pos().y(), 500, 500);
 	
-	iren->Initialize();
+    //iren->Initialize();
 	//iren->Start();
 }
 

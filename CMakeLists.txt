@@ -9,6 +9,8 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5OpenGL REQUIRED)
+find_package(Qt5Sql REQUIRED)
+find_package(Qt5WebKitWidgets REQUIRED)
 
 find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
@@ -26,17 +28,25 @@ message("VTK use file: " ${VTK_USE_FILE})
 ##include_directories(${Qt5Widgets_Includes})
 ##include_directories(${Qt5OpenGL_Includes})
 
-##message("1. cxx flags:")
-##foreach(flag ${CMAKE_CXX_FLAGS})
-##    message("- " ${flag})
-##endforeach(flag)
+message("1. cxx flags:")
+foreach(flag ${CMAKE_CXX_FLAGS})
+    message("- " ${flag})
+endforeach(flag)
 
 ##set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}" "-std=c++0x")
 
-##message("2. cxx flags:")
-##foreach(flag ${CMAKE_CXX_FLAGS})
-##    message("- " ${flag})
-##endforeach(flag)
+##set(CMAKE_CXX_FLAGS "-std=c++0x")
+
+if(UNIX)
+##if(CMAKE_COMPILER_IS_GNUCXX)
+    add_definitions(-std=c++0x)
+##endif()
+endif()
+
+message("2. cxx flags:")
+foreach(flag ${CMAKE_CXX_FLAGS})
+    message("- " ${flag})
+endforeach(flag)
 
 set(SRCS main.cpp mainwindow.cpp VtkTestWindow.cpp)
 set(FRMS mainwindow.ui)
@@ -50,6 +60,6 @@ target_link_libraries(VTKTests ${VTK_LIBRARIES})
 ##target_link_libraries(VTKTests ${Qt5Widgets_LIBRARIES})
 ##target_link_libraries(VTKTests ${Qt5OpenGL_LIBRARIES})
 
-qt5_use_modules(VTKTests Widgets OpenGL)
+qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets)
 
 

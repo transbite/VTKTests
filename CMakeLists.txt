@@ -1,6 +1,6 @@
 project(VTKTests)
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.8)
 
 message("Config with cmake " ${CMAKE_VERSION})
 
@@ -12,8 +12,14 @@ find_package(Qt5OpenGL REQUIRED)
 find_package(Qt5Sql REQUIRED)
 find_package(Qt5WebKitWidgets REQUIRED)
 
+if(Qt5Widgets_FOUND)
+    message(STATUS "VTKTests - Qt5Widgets found...")
+endif()
+
 find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
+
+add_subdirectory(SimpleQtPlugin)
 
 message("VTK libraries:")
 foreach(lib ${VTK_LIBRARIES})

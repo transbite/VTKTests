@@ -10,6 +10,6 @@ endif()
 
 set(PLUGIN_SRCS SimpleQtPlugin.cpp)
 
-add_library(SimpleQtPlugin ${PLUGIN_SRCS})
+add_library(SimpleQtPlugin SHARED ${PLUGIN_SRCS})
 
 qt5_use_modules(SimpleQtPlugin Widgets)

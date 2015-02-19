@@ -1,11 +1,22 @@
 #ifndef _SIMPLE_QT_PLUGIN_H_
 #define _SIMPLE_QT_PLUGIN_H_
 
-#include <QObject>
+#include "Interfaces.h"
 
-class SimpleQtPlugin : public QObject
+#include <QString>
+
+class SimpleQtPlugin
+        : public QObject
+        , public ISimpleQtPlugin
 {
+    Q_OBJECT
+
+    Q_PLUGIN_METADATA(IID "tests.ISimpleQtPlugin" FILE "SimpleQtPlugin.json")
+
+    Q_INTERFACES(ISimpleQtPlugin)
+
 public:
+    QString plugin_name() Q_DECL_OVERRIDE;
 
 private:
 

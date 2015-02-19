@@ -16,7 +16,11 @@ public:
     ~MainWindow();
 
 private:
+    void loadPlugins();
+
+private:
     Ui::MainWindow *ui;
+    QStringList m_pluginNames;
 };
 
 #endif // MAINWINDOW_H

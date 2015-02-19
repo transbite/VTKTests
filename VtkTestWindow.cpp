@@ -74,10 +74,10 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     vtkRenderWindowInteractor *iren = renWin->GetInteractor();//vtkRenderWindowInteractor::New();
     //iren->SetRenderWindow(renWin);
 
-    vtkInteractorStyleTrackballCamera *style = vtkInteractorStyleTrackballCamera::New();
+    //vtkInteractorStyleTrackballCamera *style = vtkInteractorStyleTrackballCamera::New();
     //vtkInteractorStyle *style = vtkInteractorStyle::New();
 
-    iren->SetInteractorStyle(style);
+    //iren->SetInteractorStyle(style);
 	
     vtkBoxWidget *boxWidget = vtkBoxWidget::New();
     boxWidget->SetInteractor(iren);

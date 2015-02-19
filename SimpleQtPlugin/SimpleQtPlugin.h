@@ -11,7 +11,7 @@ class SimpleQtPlugin
 {
     Q_OBJECT
 
-    Q_PLUGIN_METADATA(IID "tests.ISimpleQtPlugin" FILE "SimpleQtPlugin.json")
+    Q_PLUGIN_METADATA(IID "tests.ISimpleQtPlugin")// FILE "SimpleQtPlugin.json")
 
     Q_INTERFACES(ISimpleQtPlugin)
 

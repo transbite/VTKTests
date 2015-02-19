@@ -10,7 +10,7 @@ QT_END_NAMESPACE
 class ISimpleQtPlugin
 {
 public:
-    virtual ~ISimpleQtPlugin();
+    virtual ~ISimpleQtPlugin() {}
 
     virtual QString plugin_name() = 0;
 };

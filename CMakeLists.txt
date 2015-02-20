@@ -19,10 +19,21 @@ endif()
 find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
 
+find_package(CTK REQUIRED)
+
+if(CTK_FOUND)
+    message("CTK package found in " ${CTK_DIR})
+else()
+    message("Could not find CTK package?")
+endif()
+
+
 set(PLUGIN_BUILD_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/plugins")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PLUGIN_BUILD_DIRECTORY})
 
 add_subdirectory(SimpleQtPlugin)
+
+add_subdirectory(SimpleCTKPlugin)
 
 ##message("VTK libraries:")
 ##foreach(lib ${VTK_LIBRARIES})

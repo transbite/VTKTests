@@ -11,6 +11,7 @@ find_package(Qt5Widgets REQUIRED)
 find_package(Qt5OpenGL REQUIRED)
 find_package(Qt5Sql REQUIRED)
 find_package(Qt5WebKitWidgets REQUIRED)
+find_package(Qt5Concurrent REQUIRED)
 
 if(Qt5Widgets_FOUND)
     message(STATUS "VTKTests - Qt5Widgets found...")
@@ -27,6 +28,7 @@ else()
     message("Could not find CTK package?")
 endif()
 
+include_directories(${CTK_INCLUDE_DIRS})
 
 set(PLUGIN_BUILD_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/plugins")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PLUGIN_BUILD_DIRECTORY})
@@ -34,6 +36,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PLUGIN_BUILD_DIRECTORY})
 add_subdirectory(SimpleQtPlugin)
 
 add_subdirectory(SimpleCTKPlugin)
+
+add_subdirectory(GeneratedCTKPlugin/Generated.CTK)
 
 ##message("VTK libraries:")
 ##foreach(lib ${VTK_LIBRARIES})
@@ -76,10 +80,11 @@ qt5_wrap_ui(FRMS_HDRS ${FRMS})
 add_executable(VTKTests ${SRCS} ${FRMS_HDRS})
 
 target_link_libraries(VTKTests ${VTK_LIBRARIES})
+target_link_libraries(VTKTests CTKPluginFramework)
 
 ##target_link_libraries(VTKTests ${Qt5Widgets_LIBRARIES})
 ##target_link_libraries(VTKTests ${Qt5OpenGL_LIBRARIES})
 
-qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets)
+qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets Concurrent)
 
 

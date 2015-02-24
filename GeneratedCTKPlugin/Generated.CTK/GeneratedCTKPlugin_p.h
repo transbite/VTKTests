@@ -27,8 +27,9 @@
 class GeneratedCTKPlugin :
   public QObject, public ctkPluginActivator
 {
-  Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
+	Q_OBJECT
+	Q_PLUGIN_METADATA(IID "generated_ctk_plugin")
+	Q_INTERFACES(ctkPluginActivator)
 
 public:
 

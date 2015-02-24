@@ -55,6 +55,6 @@ ctkPluginContext* GeneratedCTKPlugin::getPluginContext() const
   return context;
 }
 
-Q_EXPORT_PLUGIN2(Generated_CTK, GeneratedCTKPlugin)
+//Q_EXPORT_PLUGIN2(Generated_CTK, GeneratedCTKPlugin)
 
 

@@ -6,15 +6,15 @@ message(STATUS "SimpleCTKPlugin project...")
 message("SimpleCTKPlugin build directory " ${PLUGIN_BUILD_DIRECTORY})
 message("SimpleCTKPlugin project binary directory " ${CMAKE_CURRENT_BINARY_DIR})
 
-message("CTK libraries")
-foreach(ctklib ${CTK_LIBRARIES})
-    message("-" ${ctklib})
-endforeach(ctklib)
+#message("CTK libraries")
+#foreach(ctklib ${CTK_LIBRARIES})
+#    message("-" ${ctklib})
+#endforeach(ctklib)
 
-message("CTK include directories")
-foreach(ctkdir ${CTK_INCLUDE_DIRS})
-    message("-" ${ctkdir})
-endforeach(ctkdir)
+#message("CTK include directories")
+#foreach(ctkdir ${CTK_INCLUDE_DIRS})
+#    message("-" ${ctkdir})
+#endforeach(ctkdir)
 
 include_directories(${CTK_INCLUDE_DIRS})
 

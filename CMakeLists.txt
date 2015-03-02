@@ -37,7 +37,9 @@ add_subdirectory(SimpleQtPlugin)
 
 add_subdirectory(SimpleCTKPlugin)
 
-add_subdirectory(GeneratedCTKPlugin/Generated.CTK)
+add_subdirectory(ro.navicad.VTKDicom)
+
+###add_subdirectory(GeneratedCTKPlugin/Generated.CTK)
 
 ##message("VTK libraries:")
 ##foreach(lib ${VTK_LIBRARIES})

@@ -19,37 +19,49 @@
 =============================================================================*/
 
 
-#ifndef GENERATEDCTKPLUGIN_P_H
-#define GENERATEDCTKPLUGIN_P_H
+#ifndef NAVICADVTKDICOMPLUGIN_P_H
+#define NAVICADVTKDICOMPLUGIN_P_H
+#include "ui_pluginInterfaceWidget.h"
+
 
 #include <ctkPluginActivator.h>
 
-class GeneratedCTKPlugin :
+class navicadVTKDicomPluginInterface;
+
+class navicadVTKDicomPlugin :
   public QObject, public ctkPluginActivator
 {
-	Q_OBJECT
-	Q_PLUGIN_METADATA(IID "generated_ctk_plugin")
-	Q_INTERFACES(ctkPluginActivator)
+  Q_OBJECT
+	Q_PLUGIN_METADATA(IID "ro.navicad.VTKDicom")
+  Q_INTERFACES(ctkPluginActivator)
 
 public:
 
-  GeneratedCTKPlugin();
-  ~GeneratedCTKPlugin();
+  navicadVTKDicomPlugin();
+  ~navicadVTKDicomPlugin();
 
   void start(ctkPluginContext* context);
   void stop(ctkPluginContext* context);
 
-  static GeneratedCTKPlugin* getInstance();
+  static navicadVTKDicomPlugin* getInstance();
 
   ctkPluginContext* getPluginContext() const;
 
+private slots:
+  void onOpenButton();
+
+private:
+  void initPluginInterface();
 
 private:
 
-  static GeneratedCTKPlugin* instance;
-  ctkPluginContext* context;
+	Ui::pluginInterfaceWidget			ui;
 
+	static navicadVTKDicomPlugin*		instance;
+	ctkPluginContext*					context;
 
-}; // GeneratedCTKPlugin
+	navicadVTKDicomPluginInterface*		m_pluginInterface;
 
-#endif // GENERATEDCTKPLUGIN_P_H
+}; // navicadVTKDicomPlugin
+
+#endif // NAVICADVTKDICOMPLUGIN_P_H

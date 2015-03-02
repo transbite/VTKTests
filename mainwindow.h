@@ -20,7 +20,7 @@ private:
 
 private:
     Ui::MainWindow *ui;
-    QStringList m_pluginNames;
+//    QStringList m_pluginNames;
 };
 
 #endif // MAINWINDOW_H

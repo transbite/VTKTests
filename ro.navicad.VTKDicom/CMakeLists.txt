@@ -1,24 +1,20 @@
-PROJECT(Generated_CTK)
+PROJECT(ro_navicad_VTKDicom)
 
-message(STATUS "GeneratedCTKPlugin project...")
-message("GeneratedCTKPlugin build directory " ${PLUGIN_BUILD_DIRECTORY})
-message("GeneratedCTKPlugin project binary directory " ${CMAKE_CURRENT_BINARY_DIR})
-
-message("CTK_QT_VERSION = " ${CTK_QT_VERSION})
-
-SET(PLUGIN_export_directive "Generated_CTK_EXPORT")
+SET(PLUGIN_export_directive "ro_navicad_VTKDicom_EXPORT")
 
 SET(PLUGIN_SRCS
-  GeneratedCTKPlugin.cpp
+  navicadVTKDicomPlugin.cpp
 )
 
 # Files which should be processed by Qts moc
 SET(PLUGIN_MOC_SRCS
-  ##GeneratedCTKPlugin_p.h
+  ##navicadVTKDicomPlugin.h
+	navicadVTKDicomPluginInterface.h
 )
 
 # Qt Designer files which should be processed by Qts uic
 SET(PLUGIN_UI_FORMS
+	pluginInterfaceWidget.ui
 )
 
 # QRC Files which should be compiled into the plugin
@@ -39,3 +35,5 @@ ctkMacroBuildPlugin(
   RESOURCES ${PLUGIN_resources}
   TARGET_LIBRARIES ${PLUGIN_target_libraries}
 )
+
+qt5_use_modules(${PROJECT_NAME} Widgets)

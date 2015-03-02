@@ -3,9 +3,18 @@
 
 #include "Interfaces.h"
 
+#include "ro.navicad.VTKDicom/navicadVTKDicomPluginInterface.h"
+
 #include <QDir>
 #include <QApplication>
 #include <QPluginLoader>
+
+#include <ctkPluginFrameworkLauncher.h>
+#include <ctkPluginFrameworkFactory.h>
+#include <ctkPluginFramework.h>
+#include <ctkPluginException.h>
+#include <ctkPluginContext.h>
+
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -14,11 +23,13 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+//    loadPlugins();
+//    for(QStringList::iterator it = m_pluginNames.begin(); it != m_pluginNames.end(); ++it)
+//    {
+//        qDebug() << *it;
+//    }
+
     loadPlugins();
-    for(QStringList::iterator it = m_pluginNames.begin(); it != m_pluginNames.end(); ++it)
-    {
-        qDebug() << *it;
-    }
 }
 
 MainWindow::~MainWindow()
@@ -26,22 +37,38 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//void MainWindow::loadPlugins()
+//{
+//    m_pluginNames.clear();
+
+//    QDir bdir = qApp->applicationDirPath() + "/plugins";
+//    QStringList bdirFiles = bdir.entryList(QDir::Files);
+//    for(QStringList::iterator it = bdirFiles.begin(); it != bdirFiles.end(); ++it)
+//    {
+//        QString absFilePath = bdir.absoluteFilePath(*it);
+//        qDebug() << "loadPlugins -> " << absFilePath;
+//        QPluginLoader loader(absFilePath);
+//        QObject* plugin = loader.instance();
+//        ISimpleQtPlugin* simplePlugin = qobject_cast<ISimpleQtPlugin*>(plugin);
+//        if(plugin && simplePlugin)
+//        {
+//            m_pluginNames.push_back(*it + " - " + simplePlugin->plugin_name());
+//        }
+//    }
+//}
+
 void MainWindow::loadPlugins()
 {
-    m_pluginNames.clear();
-
-    QDir bdir = qApp->applicationDirPath() + "/plugins";
-    QStringList bdirFiles = bdir.entryList(QDir::Files);
-    for(QStringList::iterator it = bdirFiles.begin(); it != bdirFiles.end(); ++it)
+    bool succeed = ctkPluginFrameworkLauncher::start("ro.navicad.VTKDicom");
+    if(succeed)
     {
-        QString absFilePath = bdir.absoluteFilePath(*it);
-        qDebug() << "loadPlugins -> " << absFilePath;
-        QPluginLoader loader(absFilePath);
-        QObject* plugin = loader.instance();
-        ISimpleQtPlugin* simplePlugin = qobject_cast<ISimpleQtPlugin*>(plugin);
-        if(plugin && simplePlugin)
+        qDebug() << "ro.navicad.VTKDicom plugin started";
+
+        ctkServiceReference pluginReference = ctkPluginFrameworkLauncher::getPluginContext()->getServiceReference<navicadVTKDicomPluginInterface>();
+        navicadVTKDicomPluginInterface* pluginInterface = ctkPluginFrameworkLauncher::getPluginContext()->getService<navicadVTKDicomPluginInterface>(pluginReference);
+        if(pluginInterface != nullptr)
         {
-            m_pluginNames.push_back(*it + " - " + simplePlugin->plugin_name());
+            pluginInterface->controlWidget->show();
         }
     }
 }

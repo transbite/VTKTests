@@ -29,6 +29,7 @@
 
 #include <vtkDICOMImageReader.h>
 #include <vtkImageData.h>
+#include <vtkInformation.h>
 
 navicadVTKDicomPlugin* navicadVTKDicomPlugin::instance = 0;
 
@@ -84,7 +85,7 @@ void navicadVTKDicomPlugin::initPluginInterface()
 
 void navicadVTKDicomPlugin::onOpenButton()
 {
-    QString dirName = QFileDialog::getExistingDirectory(nullptr, tr("Open DICOM directory"), qApp->applicationDirPath());
+    QString dirName = QFileDialog::getExistingDirectory(nullptr, tr("Open DICOM directory"), QDir::currentPath());
     if(dirName.isEmpty())
     {
         return;
@@ -106,6 +107,15 @@ void navicadVTKDicomPlugin::onOpenButton()
         return;
     }
     QMessageBox::information(nullptr, tr("Dicom loader"), tr("Dicom data loaded."), QMessageBox::Ok);
+
+    QString patientName = dicomReader->GetPatientName();
+    QString studyId = dicomReader->GetStudyID();
+    qDebug() << "Patient name: " << patientName << "; Study id: " << studyId;
+    vtkInformation* dicomInformation = dicomReader->GetInformation();
+    vtkIndent indent(2);
+    std::cout << "Dicom information: " << endl;
+    dicomInformation->PrintHeader(std::cout, indent);
+    dicomInformation->PrintKeys(std::cout, indent);
 }
 
 //Q_EXPORT_PLUGIN2(ro_navicad_VTKDicom, navicadVTKDicomPlugin)

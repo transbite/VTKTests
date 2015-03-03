@@ -2,10 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMap>
 
 namespace Ui {
 class MainWindow;
 }
+
+class QDockWidget;
 
 class MainWindow : public QMainWindow
 {
@@ -21,6 +24,7 @@ private:
 private:
     Ui::MainWindow *ui;
 //    QStringList m_pluginNames;
+    QMap<QString, QDockWidget*> m_docks;
 };
 
 #endif // MAINWINDOW_H

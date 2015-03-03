@@ -23,6 +23,7 @@ SET(PLUGIN_resources
 
 set(CTK_PLUGIN_LIBRARY_OUTPUT_DIRECTORY ${PLUGIN_BUILD_DIRECTORY})
 
+
 #Compute the plugin dependencies
 ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
 
@@ -36,4 +37,9 @@ ctkMacroBuildPlugin(
   TARGET_LIBRARIES ${PLUGIN_target_libraries}
 )
 
+if(UNIX)
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+endif()
+
 qt5_use_modules(${PROJECT_NAME} Widgets)
+target_link_libraries(${PROJECT_NAME} ${VTK_LIBRARIES})

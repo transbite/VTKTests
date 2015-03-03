@@ -23,7 +23,12 @@
 #include "navicadVTKDicomPluginInterface.h"
 
 #include <QtPlugin>
+#include <QFileDialog>
+#include <QMessageBox>
 #include <QDebug>
+
+#include <vtkDICOMImageReader.h>
+#include <vtkImageData.h>
 
 navicadVTKDicomPlugin* navicadVTKDicomPlugin::instance = 0;
 
@@ -79,7 +84,28 @@ void navicadVTKDicomPlugin::initPluginInterface()
 
 void navicadVTKDicomPlugin::onOpenButton()
 {
+    QString dirName = QFileDialog::getExistingDirectory(nullptr, tr("Open DICOM directory"), qApp->applicationDirPath());
+    if(dirName.isEmpty())
+    {
+        return;
+    }
 
+    vtkDICOMImageReader* dicomReader = vtkDICOMImageReader::New();
+    dicomReader->SetDirectoryName(dirName.toLatin1().constData());
+    dicomReader->Update();
+
+    vtkImageData* dicomData = dicomReader->GetOutput();
+    int dim[3] = {0, 0, 0};
+    if(dicomData != nullptr)
+    {
+        dicomData->GetDimensions(dim);
+    }
+    if(dim[0] < 2 || dim[1] < 2 || dim[2] < 2)
+    {
+        QMessageBox::warning(nullptr, tr("Dicom loader"), tr("Error loading dicom data!"), QMessageBox::Ok);
+        return;
+    }
+    QMessageBox::information(nullptr, tr("Dicom loader"), tr("Dicom data loaded."), QMessageBox::Ok);
 }
 
 //Q_EXPORT_PLUGIN2(ro_navicad_VTKDicom, navicadVTKDicomPlugin)

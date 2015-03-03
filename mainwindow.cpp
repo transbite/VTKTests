@@ -15,6 +15,7 @@
 #include <ctkPluginException.h>
 #include <ctkPluginContext.h>
 
+#include <QDockWidget>
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -22,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    Q_ASSERT( connect(ui->actionQuit, &QAction::triggered, qApp, &QApplication::quit) );
 
 //    loadPlugins();
 //    for(QStringList::iterator it = m_pluginNames.begin(); it != m_pluginNames.end(); ++it)
@@ -68,7 +71,12 @@ void MainWindow::loadPlugins()
         navicadVTKDicomPluginInterface* pluginInterface = ctkPluginFrameworkLauncher::getPluginContext()->getService<navicadVTKDicomPluginInterface>(pluginReference);
         if(pluginInterface != nullptr)
         {
-            pluginInterface->controlWidget->show();
+            QDockWidget* dock = new QDockWidget(tr("VTK Dicom loader"), this);
+            ui->menuWindow->addAction(dock->toggleViewAction());
+            dock->setFloating(true);
+            dock->setGeometry(pluginInterface->controlWidget->geometry());
+            dock->setWidget(pluginInterface->controlWidget);
+            dock->hide();
         }
     }
 }

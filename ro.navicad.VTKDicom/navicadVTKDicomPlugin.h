@@ -24,6 +24,7 @@
 #include "ui_pluginInterfaceWidget.h"
 
 
+
 #include <ctkPluginActivator.h>
 
 class navicadVTKDicomPluginInterface;

@@ -39,6 +39,8 @@ add_subdirectory(SimpleCTKPlugin)
 
 add_subdirectory(ro.navicad.VTKDicom)
 
+add_subdirectory(ro.navicad.CTKDicom)
+
 ###add_subdirectory(GeneratedCTKPlugin/Generated.CTK)
 
 ##message("VTK libraries:")

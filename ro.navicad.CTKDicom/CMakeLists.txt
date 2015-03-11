@@ -21,6 +21,8 @@ SET(PLUGIN_UI_FORMS
 SET(PLUGIN_resources
 )
 
+set(CTK_PLUGIN_LIBRARY_OUTPUT_DIRECTORY ${PLUGIN_BUILD_DIRECTORY})
+
 #Compute the plugin dependencies
 ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
 

@@ -4,6 +4,7 @@
 #include "Interfaces.h"
 
 #include "ro.navicad.VTKDicom/navicadVTKDicomPluginInterface.h"
+#include "ro.navicad.CTKDicom/navicadCTKDicomPluginInterface.h"
 
 #include <QDir>
 #include <QApplication>
@@ -79,4 +80,23 @@ void MainWindow::loadPlugins()
             dock->hide();
         }
     }
+
+    succeed = ctkPluginFrameworkLauncher::start("ro.navicad.CTKDicom");
+    if(succeed)
+    {
+        qDebug() << "ro.navicad.VTKDicom plugin started";
+
+        ctkServiceReference pluginReference = ctkPluginFrameworkLauncher::getPluginContext()->getServiceReference<navicadCTKDicomPluginInterface>();
+        navicadCTKDicomPluginInterface* pluginInterface = ctkPluginFrameworkLauncher::getPluginContext()->getService<navicadCTKDicomPluginInterface>(pluginReference);
+        if(pluginInterface != nullptr)
+        {
+            QDockWidget* dock = new QDockWidget(tr("CTK Dicom loader"), this);
+            ui->menuWindow->addAction(dock->toggleViewAction());
+            dock->setFloating(true);
+            dock->setGeometry(pluginInterface->controlWidget->geometry());
+            dock->setWidget(pluginInterface->controlWidget);
+            dock->hide();
+        }
+    }
+
 }

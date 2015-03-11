@@ -21,7 +21,12 @@
 
 #include "navicadCTKDicomPlugin.h"
 #include "navicadCTKDicomPluginInterface.h"
+
 #include <QtPlugin>
+#include <QDebug>
+
+#include <ctkFileDialog.h>
+#include <ctkDICOMIndexer.h>
 
 navicadCTKDicomPlugin* navicadCTKDicomPlugin::instance = 0;
 
@@ -39,6 +44,8 @@ void navicadCTKDicomPlugin::start(ctkPluginContext* context)
 {
   instance = this;
   this->context = context;
+
+  initPluginInterface();
 }
 
 void navicadCTKDicomPlugin::stop(ctkPluginContext* context)
@@ -54,6 +61,29 @@ navicadCTKDicomPlugin* navicadCTKDicomPlugin::getInstance()
 ctkPluginContext* navicadCTKDicomPlugin::getPluginContext() const
 {
   return context;
+}
+
+void navicadCTKDicomPlugin::initPluginInterface()
+{
+    m_pluginInterface = new navicadCTKDicomPluginInterface;
+    m_pluginInterface->controlWidget = new QWidget;
+    ui.setupUi(m_pluginInterface->controlWidget);
+
+    Q_ASSERT( connect(ui.openButton, &QPushButton::clicked, this, &navicadCTKDicomPlugin::onOpenButton) );
+
+    ctkDictionary properties;
+    properties["message"] = "CTKDicomPluginWidget";
+
+    context->registerService<navicadCTKDicomPluginInterface>(m_pluginInterface, properties);
+}
+
+void navicadCTKDicomPlugin::onOpenButton()
+{
+    QString dirName = ctkFileDialog::getExistingDirectory(nullptr, tr("Open DICOM directory"), QDir::currentPath());
+    qDebug() << "Dicom directory: " << dirName;
+
+    ctkDICOMIndexer dcmIndx;
+    //dcmIndx.
 }
 
 //Q_EXPORT_PLUGIN2(ro_navicad_CTKDicom, navicadCTKDicomPlugin)

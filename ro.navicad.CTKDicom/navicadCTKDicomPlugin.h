@@ -47,6 +47,11 @@ public:
 
   ctkPluginContext* getPluginContext() const;
 
+private slots:
+  void onOpenButton();
+
+private:
+  void initPluginInterface();
 
 private:
     Ui::pluginInterfaceWidget			ui;

@@ -9,21 +9,60 @@
 #include <QDir>
 #include <QApplication>
 #include <QPluginLoader>
+#include <QDockWidget>
+#include <QDebug>
 
 #include <ctkPluginFrameworkLauncher.h>
 #include <ctkPluginFrameworkFactory.h>
 #include <ctkPluginFramework.h>
 #include <ctkPluginException.h>
 #include <ctkPluginContext.h>
+#include <ctkServiceTrackerCustomizer.h>
 
-#include <QDockWidget>
-#include <QDebug>
+class navicadVTKDicomPluginInterfaceTracker : public ctkServiceTrackerCustomizer<navicadVTKDicomPluginInterface*>
+{
+public:
+    navicadVTKDicomPluginInterfaceTracker(MainWindow* w);
+    ~navicadVTKDicomPluginInterfaceTracker();
+private:
+    navicadVTKDicomPluginInterface* addingService(const ctkServiceReference &reference);
+    void modifiedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service);
+    void removedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service);
+
+    MainWindow* mw;
+};
+
+navicadVTKDicomPluginInterfaceTracker::navicadVTKDicomPluginInterfaceTracker(MainWindow* w) : mw(w)
+{
+
+}
+
+navicadVTKDicomPluginInterfaceTracker::~navicadVTKDicomPluginInterfaceTracker()
+{
+
+}
+
+navicadVTKDicomPluginInterface* navicadVTKDicomPluginInterfaceTracker::addingService(const ctkServiceReference &reference)
+{
+    return mw->addingService(reference);
+}
+
+void navicadVTKDicomPluginInterfaceTracker::modifiedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)
+{
+    mw->modifiedService(reference, service);
+}
+
+void navicadVTKDicomPluginInterfaceTracker::removedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)
+{
+    mw->modifiedService(reference, service);
+}
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    m_vtkTestWindow = ui->widget;
 
     Q_ASSERT( connect(ui->actionQuit, &QAction::triggered, qApp, &QApplication::quit) );
 
@@ -64,22 +103,22 @@ MainWindow::~MainWindow()
 void MainWindow::loadPlugins()
 {
     bool succeed = ctkPluginFrameworkLauncher::start("ro.navicad.VTKDicom");
-    if(succeed)
-    {
-        qDebug() << "ro.navicad.VTKDicom plugin started";
+//    if(succeed)
+//    {
+//        qDebug() << "ro.navicad.VTKDicom plugin started";
 
-        ctkServiceReference pluginReference = ctkPluginFrameworkLauncher::getPluginContext()->getServiceReference<navicadVTKDicomPluginInterface>();
-        navicadVTKDicomPluginInterface* pluginInterface = ctkPluginFrameworkLauncher::getPluginContext()->getService<navicadVTKDicomPluginInterface>(pluginReference);
-        if(pluginInterface != nullptr)
-        {
-            QDockWidget* dock = new QDockWidget(tr("VTK Dicom loader"), this);
-            ui->menuWindow->addAction(dock->toggleViewAction());
-            dock->setFloating(true);
-            dock->setGeometry(pluginInterface->controlWidget->geometry());
-            dock->setWidget(pluginInterface->controlWidget);
-            dock->hide();
-        }
-    }
+//        ctkServiceReference pluginReference = ctkPluginFrameworkLauncher::getPluginContext()->getServiceReference<navicadVTKDicomPluginInterface>();
+//        navicadVTKDicomPluginInterface* pluginInterface = ctkPluginFrameworkLauncher::getPluginContext()->getService<navicadVTKDicomPluginInterface>(pluginReference);
+//        if(pluginInterface != nullptr)
+//        {
+//            QDockWidget* dock = new QDockWidget(tr("VTK Dicom loader"), this);
+//            ui->menuWindow->addAction(dock->toggleViewAction());
+//            dock->setFloating(true);
+//            dock->setGeometry(pluginInterface->controlWidget->geometry());
+//            dock->setWidget(pluginInterface->controlWidget);
+//            dock->hide();
+//        }
+//    }
 
     succeed = ctkPluginFrameworkLauncher::start("ro.navicad.CTKDicom");
     if(succeed)
@@ -98,5 +137,33 @@ void MainWindow::loadPlugins()
             dock->hide();
         }
     }
+
+}
+
+navicadVTKDicomPluginInterface* MainWindow::addingService(const ctkServiceReference &reference)
+{
+    ctkPluginContext* context = ctkPluginFrameworkLauncher::getPluginContext();
+    navicadVTKDicomPluginInterface* pluginInterface = context->getService<navicadVTKDicomPluginInterface>(reference);
+
+    if(pluginInterface != nullptr)
+    {
+        QDockWidget* dock = new QDockWidget(tr("VTK Dicom loader"), this);
+        ui->menuWindow->addAction(dock->toggleViewAction());
+        dock->setFloating(true);
+        dock->setGeometry(pluginInterface->controlWidget->geometry());
+        dock->setWidget(pluginInterface->controlWidget);
+        dock->hide();
+    }
+
+    return pluginInterface;
+}
+
+void MainWindow::modifiedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)
+{
+
+}
+
+void MainWindow::removedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)
+{
 
 }

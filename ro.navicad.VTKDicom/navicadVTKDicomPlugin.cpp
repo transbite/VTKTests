@@ -31,6 +31,10 @@
 #include <vtkImageData.h>
 #include <vtkInformation.h>
 
+QString navicadVTKDicomPluginInterface::LABEL_WIDGET    = "VTKDicomPluginInterfaceWidget";
+QString navicadVTKDicomPluginInterface::LABEL_READER    = "VTKDicomPluginInterfaceReader";
+QString navicadVTKDicomPluginInterface::LABEL_DATA      = "VTKDicomPluginInterfaceData";
+
 navicadVTKDicomPlugin* navicadVTKDicomPlugin::instance = 0;
 
 navicadVTKDicomPlugin::navicadVTKDicomPlugin()
@@ -73,6 +77,8 @@ void navicadVTKDicomPlugin::initPluginInterface()
 {
     m_pluginInterface = new navicadVTKDicomPluginInterface;
     m_pluginInterface->controlWidget = new QWidget;
+    m_pluginInterface->dicomReader = nullptr;
+    m_pluginInterface->dicomData = nullptr;
     ui.setupUi(m_pluginInterface->controlWidget);
 
     Q_ASSERT( connect(ui.openButton, &QPushButton::clicked, this, &navicadVTKDicomPlugin::onOpenButton) );

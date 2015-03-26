@@ -86,7 +86,7 @@ void navicadVTKDicomPlugin::initPluginInterface()
     ctkDictionary properties;
     properties["message"] = "VTKDicomPluginWidget";
 
-    context->registerService<navicadVTKDicomPluginInterface>(m_pluginInterface, properties);
+    m_serviceRegistration = context->registerService<navicadVTKDicomPluginInterface>(m_pluginInterface, properties);
 }
 
 void navicadVTKDicomPlugin::onOpenButton()
@@ -122,6 +122,15 @@ void navicadVTKDicomPlugin::onOpenButton()
     std::cout << "Dicom information: " << endl;
     dicomInformation->PrintHeader(std::cout, indent);
     dicomInformation->PrintKeys(std::cout, indent);
+
+    //TODO - clean old data
+    //m_pluginInterface->dicomReader->Delete();
+    //m_pluginInterface->dicomData->Delete();
+    m_pluginInterface->dicomReader = dicomReader;
+    m_pluginInterface->dicomData = dicomData;
+    ctkDictionary properties;
+    properties["message"] = "VTKDicomPluginData";
+    m_serviceRegistration.setProperties(properties);
 }
 
 //Q_EXPORT_PLUGIN2(ro_navicad_VTKDicom, navicadVTKDicomPlugin)

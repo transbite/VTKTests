@@ -26,6 +26,7 @@
 
 
 #include <ctkPluginActivator.h>
+#include <ctkServiceRegistration.h>
 
 class navicadVTKDicomPluginInterface;
 
@@ -62,6 +63,7 @@ private:
 	ctkPluginContext*					context;
 
 	navicadVTKDicomPluginInterface*		m_pluginInterface;
+    ctkServiceRegistration              m_serviceRegistration;
 
 }; // navicadVTKDicomPlugin
 

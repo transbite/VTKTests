@@ -59,7 +59,9 @@ void navicadVTKDicomPluginInterfaceTracker::removedService (const ctkServiceRefe
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    m_vtkDicomPluginInterfaceTracker(nullptr),
+    m_ctkServiceTracker(nullptr)
 {
     ui->setupUi(this);
     m_vtkTestWindow = ui->widget;
@@ -77,6 +79,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    delete m_vtkDicomPluginInterfaceTracker;
+    delete m_ctkServiceTracker;
     delete ui;
 }
 
@@ -103,6 +107,10 @@ MainWindow::~MainWindow()
 void MainWindow::loadPlugins()
 {
     bool succeed = ctkPluginFrameworkLauncher::start("ro.navicad.VTKDicom");
+    m_vtkDicomPluginInterfaceTracker = new navicadVTKDicomPluginInterfaceTracker(this);
+    ctkPluginContext* context = ctkPluginFrameworkLauncher::getPluginContext();
+    m_ctkServiceTracker = new ctkServiceTracker<navicadVTKDicomPluginInterface*>(context, m_vtkDicomPluginInterfaceTracker);
+    m_ctkServiceTracker->open();
 //    if(succeed)
 //    {
 //        qDebug() << "ro.navicad.VTKDicom plugin started";
@@ -160,7 +168,10 @@ navicadVTKDicomPluginInterface* MainWindow::addingService(const ctkServiceRefere
 
 void MainWindow::modifiedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)
 {
-
+    if(service->dicomReader != nullptr && service->dicomData != nullptr)
+    {
+        qDebug() << "Dicom data added to vtk window";
+    }
 }
 
 void MainWindow::removedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)

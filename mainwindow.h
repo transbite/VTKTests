@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QMap>
 #include <ctkServiceReference.h>
+#include <ctkServiceTracker.h>
 
 namespace Ui {
 class MainWindow;
@@ -11,6 +12,7 @@ class MainWindow;
 
 class QDockWidget;
 class navicadVTKDicomPluginInterface;
+class navicadVTKDicomPluginInterfaceTracker;
 class VtkTestWindow;
 
 class MainWindow : public QMainWindow
@@ -34,6 +36,8 @@ private:
 private:
     Ui::MainWindow *ui;
     VtkTestWindow* m_vtkTestWindow;
+    navicadVTKDicomPluginInterfaceTracker* m_vtkDicomPluginInterfaceTracker;
+    ctkServiceTracker<navicadVTKDicomPluginInterface*>* m_ctkServiceTracker;
 //    QStringList m_pluginNames;
     QMap<QString, QDockWidget*> m_docks;
 };

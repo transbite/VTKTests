@@ -171,6 +171,7 @@ void MainWindow::modifiedService (const ctkServiceReference &reference, navicadV
     if(service->dicomReader != nullptr && service->dicomData != nullptr)
     {
         qDebug() << "Dicom data added to vtk window";
+        m_vtkTestWindow->addDicomData(service->dicomReader, service->dicomData);
     }
 }
 

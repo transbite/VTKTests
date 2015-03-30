@@ -156,11 +156,12 @@ navicadVTKDicomPluginInterface* MainWindow::addingService(const ctkServiceRefere
     if(pluginInterface != nullptr)
     {
         QDockWidget* dock = new QDockWidget(tr("VTK Dicom loader"), this);
-        ui->menuWindow->addAction(dock->toggleViewAction());
-        dock->setFloating(true);
-        dock->setGeometry(pluginInterface->controlWidget->geometry());
         dock->setWidget(pluginInterface->controlWidget);
-        dock->hide();
+        //dock->hide();
+        ui->menuWindow->addAction(dock->toggleViewAction());
+        dock->setFloating(false/*true*/);
+        //dock->setGeometry(pluginInterface->controlWidget->geometry());
+        this->addDockWidget(Qt::LeftDockWidgetArea, dock);
     }
 
     return pluginInterface;

@@ -21,6 +21,7 @@
 #include <vtkPiecewiseFunction.h>
 #include <vtkVolumeProperty.h>
 #include <vtkImageResample.h>
+#include <vtkGenericOpenGLRenderWindow.h>
 
 void addVolume(vtkRenderWindow* renWin, vtkRenderer* renderer, vtkAlgorithm* reader, vtkImageData* input, int blendType = 3)
 {
@@ -28,6 +29,19 @@ void addVolume(vtkRenderWindow* renWin, vtkRenderer* renderer, vtkAlgorithm* rea
   double reductionFactor = 1.0;
   double opacityWindow = 4096;
   double opacityLevel = 2048;
+  double frameRate = 10.0;
+  int clip = 0;
+
+ // Connect it all. Note that funny arithematic on the
+  // SetDesiredUpdateRate - the vtkRenderWindow divides it
+  // allocated time across all renderers, and the renderer
+  // divides it time across all props. If clip is
+  // true then there are two props
+//  vtkRenderWindowInteractor *iren = vtkRenderWindowInteractor::New();
+//  iren->SetRenderWindow(renWin);
+  //iren->SetDesiredUpdateRate(frameRate / (1+clip) );
+
+  //iren->GetInteractorStyle()->SetDefaultRenderer(renderer);
 
   // Verify that we actually have a volume
   int dim[3];
@@ -227,6 +241,10 @@ void addVolume(vtkRenderWindow* renWin, vtkRenderer* renderer, vtkAlgorithm* rea
        break;
     }
 
+  // Set the default window size
+  //renWin->SetSize(600,600);
+  renWin->Render();
+
    // Add the volume to the scene
   renderer->AddVolume( volume );
 
@@ -234,6 +252,8 @@ void addVolume(vtkRenderWindow* renWin, vtkRenderer* renderer, vtkAlgorithm* rea
 
   // interact with data
   renWin->Render();
+
+   // iren->Start();
 }
 
 class vtkMyCallback : public vtkCommand
@@ -252,7 +272,7 @@ public:
 };
 
 VtkTestWindow::VtkTestWindow(QWidget* parent)
-    : QVTKWidget(parent)
+    : QVTKWidget2(parent)
 {
 //	vtkAxesActor* axes = vtkAxesActor::New();
 //	axes->SetScale(3.0);
@@ -291,7 +311,7 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
 //	ren1->AddActor( coneActor2 );
 //	ren1->AddActor(axes);
 
-	vtkRenderWindow* renWin = this->GetRenderWindow();
+    /*vtkRenderWindow**/ vtkGenericOpenGLRenderWindow* renWin = this->GetRenderWindow();
 	renWin->AddRenderer(ren1);
 
 //    vtkRenderWindowInteractor *iren = renWin->GetInteractor();//vtkRenderWindowInteractor::New();
@@ -332,12 +352,26 @@ VtkTestWindow::~VtkTestWindow()
 
 void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
 {
-    addVolume(this->GetRenderWindow(), ren1, dicomReader, imageData);
+    ///test-remove
+    vtkRenderer *renderer = vtkRenderer::New();
+    renderer->SetBackground(0.5, 0.9, 0.7);
+    vtkRenderWindow *renWin = vtkRenderWindow::New();
+    renWin->AddRenderer(renderer);
+    QVTKWidget* wdg = new QVTKWidget();
+    wdg->SetRenderWindow(renWin);
+    wdg->resize(600, 600);
+    wdg->show();
+    addVolume(renWin, renderer, dicomReader, imageData);
     return;
     //
 
     m_dicomReader = dicomReader;
     m_imageData = imageData;
+
+    //test-remove
+    vtkRenderWindowInteractor* irn = this->GetRenderWindow()->GetInteractor();
+    irn->SetDesiredUpdateRate(30.0);
+    //
 
     m_volume = vtkVolume::New();
     m_volumeMapper = vtkSmartVolumeMapper::New();
@@ -394,5 +428,5 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
 //    coneActor->GetProperty()->SetOpacity(0.45);
 //    ren1->AddActor(coneActor);
 
-//    this->GetRenderWindow()->Render();
+    this->GetRenderWindow()->Render();
   }

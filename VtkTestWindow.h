@@ -9,7 +9,7 @@ class vtkImageData;
 class vtkVolume;
 class vtkSmartVolumeMapper;
 
-class VtkTestWindow : public QVTKWidget
+class VtkTestWindow : public QVTKWidget2
 {
 public:
     VtkTestWindow(QWidget* parent = nullptr);

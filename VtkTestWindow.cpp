@@ -22,6 +22,11 @@
 #include <vtkVolumeProperty.h>
 #include <vtkImageResample.h>
 #include <vtkGenericOpenGLRenderWindow.h>
+#include <vtkOpenGLExtensionManager.h>
+#include <vtkOpenGLRenderWindow.h>
+#include <vtkOpenGLRenderer.h>
+
+#include <QDebug>
 
 void addVolume(vtkRenderWindow* renWin, vtkRenderer* renderer, vtkAlgorithm* reader, vtkImageData* input, int blendType = 3)
 {
@@ -353,9 +358,24 @@ VtkTestWindow::~VtkTestWindow()
 void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
 {
     ///test-remove
-    vtkRenderer *renderer = vtkRenderer::New();
+#if 0
+    vtkOpenGLExtensionManager* extManager = vtkOpenGLExtensionManager::New();
+
+    vtkRenderWindow *renWin = vtkOpenGLRenderWindow::New();//vtkRenderWindow::New();
+
+    extManager->SetRenderWindow(renWin);
+    if(extManager->ExtensionSupported("GL_ARB_compatibility") != 0)
+    {
+        extManager->LoadExtension("GL_ARB_compatibility");
+    }
+    else
+    {
+        qDebug() << "GL_ARB_compatibility cannot be loaded.";
+    }
+
+    vtkRenderer *renderer = vtkOpenGLRenderer::New();//vtkRenderer::New();
     renderer->SetBackground(0.5, 0.9, 0.7);
-    vtkRenderWindow *renWin = vtkRenderWindow::New();
+
     renWin->AddRenderer(renderer);
     QVTKWidget* wdg = new QVTKWidget();
     wdg->SetRenderWindow(renWin);
@@ -363,6 +383,7 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
     wdg->show();
     addVolume(renWin, renderer, dicomReader, imageData);
     return;
+#endif //0
     //
 
     m_dicomReader = dicomReader;

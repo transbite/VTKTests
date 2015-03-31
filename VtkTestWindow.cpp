@@ -364,7 +364,7 @@ VtkTestWindow::~VtkTestWindow()
 void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
 {
     ///test-remove
-#if 1
+#if 0
     QVTKWidget2* wdg = new QVTKWidget2();
     //vtkRenderWindow *renWin = wdg->GetRenderWindow();
     vtkGenericOpenGLRenderWindow *renWin = wdg->GetRenderWindow();
@@ -442,20 +442,6 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
 
     ren1->AddVolume(m_volume);
     ren1->ResetCamera();
-//    vtkConeSource *cone = vtkConeSource::New();
-//    cone->SetHeight( 3.0 );
-//    cone->SetRadius( 1.0 );
-//    cone->SetResolution( 100 );
-//    vtkPolyDataMapper *coneMapper = vtkPolyDataMapper::New();
-//    coneMapper->SetInputConnection( cone->GetOutputPort() );
-//    vtkActor *coneActor = vtkActor::New();
-//    coneActor->SetMapper( coneMapper );
-//    coneActor->GetProperty()->SetColor(0.2, 0.63, 0.79);
-//    coneActor->GetProperty()->SetDiffuse(0.7);
-//    coneActor->GetProperty()->SetSpecular(0.4);
-//    coneActor->GetProperty()->SetSpecularPower(20);
-//    coneActor->GetProperty()->SetOpacity(0.45);
-//    ren1->AddActor(coneActor);
 
     this->GetRenderWindow()->Render();
   }

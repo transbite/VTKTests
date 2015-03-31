@@ -25,6 +25,8 @@
 #include <vtkOpenGLExtensionManager.h>
 #include <vtkOpenGLRenderWindow.h>
 #include <vtkOpenGLRenderer.h>
+#include <vtkOpenGLGPUVolumeRayCastMapper.h>
+#include <vtkOpenGLVolumeTextureMapper3D.h>
 
 #include <QDebug>
 
@@ -71,6 +73,8 @@ void addVolume(vtkRenderWindow* renWin, vtkRenderer* renderer, vtkAlgorithm* rea
   // Create our volume and mapper
   vtkVolume *volume = vtkVolume::New();
   vtkSmartVolumeMapper *mapper = vtkSmartVolumeMapper::New();
+  //vtkOpenGLGPUVolumeRayCastMapper* mapper = vtkOpenGLGPUVolumeRayCastMapper::New();
+  //vtkOpenGLVolumeTextureMapper3D* mapper = vtkOpenGLVolumeTextureMapper3D::New();
 
   if ( reductionFactor < 1.0 )
     {
@@ -358,26 +362,28 @@ VtkTestWindow::~VtkTestWindow()
 void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
 {
     ///test-remove
-#if 0
-    vtkOpenGLExtensionManager* extManager = vtkOpenGLExtensionManager::New();
+#if 1
+    QVTKWidget2* wdg = new QVTKWidget2();
+    //vtkRenderWindow *renWin = wdg->GetRenderWindow();
+    vtkGenericOpenGLRenderWindow *renWin = wdg->GetRenderWindow();
 
-    vtkRenderWindow *renWin = vtkOpenGLRenderWindow::New();//vtkRenderWindow::New();
+//    vtkOpenGLExtensionManager* extManager = vtkOpenGLExtensionManager::New();
+//    extManager->SetRenderWindow(renWin);
+//    if(extManager->ExtensionSupported("GL_ARB_compatibility") != 0)
+//    {
+//        extManager->LoadExtension("GL_ARB_compatibility");
+//    }
+//    else
+//    {
+//        qDebug() << "GL_ARB_compatibility cannot be loaded.";
+//    }
 
-    extManager->SetRenderWindow(renWin);
-    if(extManager->ExtensionSupported("GL_ARB_compatibility") != 0)
-    {
-        extManager->LoadExtension("GL_ARB_compatibility");
-    }
-    else
-    {
-        qDebug() << "GL_ARB_compatibility cannot be loaded.";
-    }
-
-    vtkRenderer *renderer = vtkOpenGLRenderer::New();//vtkRenderer::New();
+    //vtkRenderer *renderer = vtkOpenGLRenderer::New();
+    vtkRenderer *renderer = vtkRenderer::New();
     renderer->SetBackground(0.5, 0.9, 0.7);
 
     renWin->AddRenderer(renderer);
-    QVTKWidget* wdg = new QVTKWidget();
+
     wdg->SetRenderWindow(renWin);
     wdg->resize(600, 600);
     wdg->show();

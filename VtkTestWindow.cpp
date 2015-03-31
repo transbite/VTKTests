@@ -27,6 +27,7 @@
 #include <vtkOpenGLRenderer.h>
 #include <vtkOpenGLGPUVolumeRayCastMapper.h>
 #include <vtkOpenGLVolumeTextureMapper3D.h>
+#include <vtkMetaImageReader.h>
 
 #include <QDebug>
 
@@ -348,9 +349,10 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     //iren->Initialize();
 	//iren->Start();
 
-//    m_volume = vtkVolume::New();
-//    m_volumeMapper = vtkSmartVolumeMapper::New();
+    m_volume = vtkVolume::New();
+    m_volumeMapper = vtkSmartVolumeMapper::New();
 
+    m_metaImageReader = vtkMetaImageReader::New();
 }
 
 
@@ -400,8 +402,8 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
     irn->SetDesiredUpdateRate(30.0);
     //
 
-    m_volume = vtkVolume::New();
-    m_volumeMapper = vtkSmartVolumeMapper::New();
+    //m_volume = vtkVolume::New();
+    //m_volumeMapper = vtkSmartVolumeMapper::New();
 
     m_volumeMapper->SetInputConnection(m_dicomReader->GetOutputPort());
 
@@ -457,3 +459,49 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
 
     this->GetRenderWindow()->Render();
   }
+
+void VtkTestWindow::addImage(const QString &imageFile)
+{
+    m_metaImageReader->SetFileName(imageFile.toStdString().c_str());
+    m_metaImageReader->Update();
+
+    m_volumeMapper->SetInputConnection(m_metaImageReader->GetOutputPort());
+
+    // Create our transfer function
+    vtkColorTransferFunction* colorFun = vtkColorTransferFunction::New();
+    vtkPiecewiseFunction* opacityFun = vtkPiecewiseFunction::New();
+
+    // Create the property and attach the transfer functions
+    vtkVolumeProperty *property = vtkVolumeProperty::New();
+    property->SetIndependentComponents(true);
+    property->SetColor( colorFun );
+    property->SetScalarOpacity( opacityFun );
+    property->SetInterpolationTypeToLinear();
+
+    m_volume->SetProperty(property);
+    m_volume->SetMapper(m_volumeMapper);
+
+    //CT_Skin
+    colorFun->AddRGBPoint( -3024, 0, 0, 0, 0.5, 0.0 );
+    colorFun->AddRGBPoint( -1000, .62, .36, .18, 0.5, 0.0 );
+    colorFun->AddRGBPoint( -500, .88, .60, .29, 0.33, 0.45 );
+    colorFun->AddRGBPoint( 3071, .83, .66, 1, 0.5, 0.0 );
+
+    opacityFun->AddPoint(-3024, 0, 0.5, 0.0 );
+    opacityFun->AddPoint(-1000, 0, 0.5, 0.0 );
+    opacityFun->AddPoint(-500, 1.0, 0.33, 0.45 );
+    opacityFun->AddPoint(3071, 1.0, 0.5, 0.0);
+
+    m_volumeMapper->SetBlendModeToComposite();
+    property->ShadeOn();
+    property->SetAmbient(0.1);
+    property->SetDiffuse(0.9);
+    property->SetSpecular(0.2);
+    property->SetSpecularPower(10.0);
+    property->SetScalarOpacityUnitDistance(0.8919);
+
+    ren1->AddVolume(m_volume);
+    ren1->ResetCamera();
+
+    this->GetRenderWindow()->Render();
+}

@@ -39,6 +39,7 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <addaction name="actionLoadImage"/>
     <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
@@ -61,6 +62,11 @@
   <action name="actionQuit">
    <property name="text">
     <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionLoadImage">
+   <property name="text">
+    <string>Load Image</string>
    </property>
   </action>
  </widget>

@@ -11,6 +11,7 @@
 #include <QPluginLoader>
 #include <QDockWidget>
 #include <QDebug>
+#include <QFileDialog>
 
 #include <ctkPluginFrameworkLauncher.h>
 #include <ctkPluginFrameworkFactory.h>
@@ -173,10 +174,24 @@ void MainWindow::modifiedService (const ctkServiceReference &reference, navicadV
     {
         qDebug() << "Dicom data added to vtk window";
         m_vtkTestWindow->addDicomData(service->dicomReader, service->dicomData);
+
     }
 }
 
 void MainWindow::removedService (const ctkServiceReference &reference, navicadVTKDicomPluginInterface* service)
 {
 
+}
+
+void MainWindow::on_actionLoadImage_triggered()
+{
+    // Open a Qt dialog for to select a `.mhd` file.
+    QString fileName = QFileDialog::getOpenFileName(
+        this, tr("Open Meta Image"), ".", tr("Image Files (*.mhd)"));
+
+    // `fileName` will be `NULL` if the user clicked "Cancel".
+    if (fileName != NULL)
+    {
+        m_vtkTestWindow->addImage(fileName);
+    }
 }

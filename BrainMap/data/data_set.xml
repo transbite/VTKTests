@@ -1,0 +1,4020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section-data-set>
+  <blue-channel>background fluorescence</blue-channel>
+  <delegate>false</delegate>
+  <expression>false</expression>
+  <failed>false</failed>
+  <failed-facet>734881840</failed-facet>
+  <green-channel>rAAV</green-channel>
+  <id>183282970</id>
+  <name nil="true"/>
+  <qc-date>2013-05-01T21:51:38Z</qc-date>
+  <red-channel>background fluorescence</red-channel>
+  <reference-space-id>9</reference-space-id>
+  <rnaseq-design-id nil="true"/>
+  <section-thickness>100.0</section-thickness>
+  <specimen-id>181410254</specimen-id>
+  <sphinx-id>15632</sphinx-id>
+  <storage-directory>/external/connectivity/prod226/image_series_183282970/</storage-directory>
+  <weight>5140</weight>
+  <genes/>
+  <probes/>
+  <products>
+    <product>
+      <abbreviation>ConnProj</abbreviation>
+      <description>Image data of the mouse brain detailing axonal projections labeled by viral tracers.</description>
+      <id type="integer">5</id>
+      <name>Mouse Connectivity Projection</name>
+      <product-name-facet type="integer">3981643079</product-name-facet>
+      <resource>Allen Mouse Brain Connectivity Atlas</resource>
+      <species>Mouse</species>
+      <species-name-facet type="integer">1861523945</species-name-facet>
+      <tags nil="true"/>
+    </product>
+  </products>
+  <specimen>
+    <donor-id type="integer">181410244</donor-id>
+    <external-specimen-name>106577</external-specimen-name>
+    <hemisphere nil="true"/>
+    <id type="integer">181410254</id>
+    <name>Calb2-IRES-Cre-218</name>
+    <parent-id type="integer" nil="true"/>
+    <parent-x-coord type="integer" nil="true"/>
+    <parent-y-coord type="integer" nil="true"/>
+    <parent-z-coord type="integer" nil="true"/>
+    <rna-integrity-number type="float" nil="true"/>
+    <specimen-id-path>/181410254/</specimen-id-path>
+    <structure-id type="integer" nil="true"/>
+    <tissue-ph type="float" nil="true"/>
+    <donor>
+      <age-id type="integer">93</age-id>
+      <chemotherapy nil="true"/>
+      <condition-description>tissuecyte - PMT (V) tissuecyte - ImageDepth (um) tissuecyte - Power at Objective (mW) tissuecyte - Laser Wavelength (nm)</condition-description>
+      <donor-condition-description-facet type="integer">2694765480</donor-condition-description-facet>
+      <donor-race-only-facet type="integer" nil="true"/>
+      <donor-sex-facet type="integer">4122955671</donor-sex-facet>
+      <donor-strain-facet type="integer">184604830</donor-strain-facet>
+      <donor-strain-only-facet type="integer">184604830</donor-strain-only-facet>
+      <egfr-amplification nil="true"/>
+      <extent-of-resection nil="true"/>
+      <external-donor-name>106577</external-donor-name>
+      <handedness nil="true"/>
+      <id type="integer">181410244</id>
+      <initial-kps nil="true"/>
+      <mgmt-ihc type="integer" nil="true"/>
+      <mgmt-methylation nil="true"/>
+      <molecular-subtype nil="true"/>
+      <multifocal nil="true"/>
+      <name>Calb2-IRES-Cre-218</name>
+      <organism-id type="integer">2</organism-id>
+      <pmi type="float" nil="true"/>
+      <primary-tissue-source nil="true"/>
+      <pten-deletion nil="true"/>
+      <race-only nil="true"/>
+      <radiation-therapy nil="true"/>
+      <recurrence-by-six-months nil="true"/>
+      <sex>M</sex>
+      <sex-full-name>Male</sex-full-name>
+      <sleep-state nil="true"/>
+      <smoker nil="true"/>
+      <strain>B6.Cg</strain>
+      <strain-only>B6.Cg</strain-only>
+      <survival-days type="integer" nil="true"/>
+      <tags>Calb2-IRES-Cre-218 </tags>
+      <theiler-stage nil="true"/>
+      <time-to-progression-or-recurrence nil="true"/>
+      <transgenic-mouse-id type="integer">7409</transgenic-mouse-id>
+      <tumor-status nil="true"/>
+      <weight-grams type="float">25.3</weight-grams>
+    </donor>
+  </specimen>
+  <alignment3d>
+    <id type="integer">282764837</id>
+    <trv>0.0469902,-0.00258738,0.948949,0.020776,0.885299,0.00576708,-1.05303,-0.009252,0.0315968,-254.13,254.536,14299.7</trv>
+    <tvr>0.031639,-0.00981923,-0.948424,-0.00759688,1.12977,0.0219511,1.05221,0.00356662,0.047024,13572.7,-603.391,-405.938</tvr>
+  </alignment3d>
+  <section-images>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282972</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0126/0500232342-0126.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">127</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765089</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282976</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0125/0500232342-0125.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">126</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765087</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282980</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0124/0500232342-0124.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">125</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765085</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282984</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0123/0500232342-0123.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">124</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765083</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282988</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0122/0500232342-0122.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">123</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765081</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282992</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0121/0500232342-0121.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">122</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765079</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183282996</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0120/0500232342-0120.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">121</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765077</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283000</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0119/0500232342-0119.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">120</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765075</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283004</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0118/0500232342-0118.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">119</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765073</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283008</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0117/0500232342-0117.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">118</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765071</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283012</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0116/0500232342-0116.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">117</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765069</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283016</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0115/0500232342-0115.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">116</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765067</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283020</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0114/0500232342-0114.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">115</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765065</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283024</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0113/0500232342-0113.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">114</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765063</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283028</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0112/0500232342-0112.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">113</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765061</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283032</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0111/0500232342-0111.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">112</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765059</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283036</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0110/0500232342-0110.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">111</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765057</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283040</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0109/0500232342-0109.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">110</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765055</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283044</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0108/0500232342-0108.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">109</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765053</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283048</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0107/0500232342-0107.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">108</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765051</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283052</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0106/0500232342-0106.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">107</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765049</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283056</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0105/0500232342-0105.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">106</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765047</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283060</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0104/0500232342-0104.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">105</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765045</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283064</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0103/0500232342-0103.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">104</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765043</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283068</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0102/0500232342-0102.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">103</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765041</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283072</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0101/0500232342-0101.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">102</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765039</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283076</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0100/0500232342-0100.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">101</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765037</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283080</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0099/0500232342-0099.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">100</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765035</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283084</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0098/0500232342-0098.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">99</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765033</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283088</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0097/0500232342-0097.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">98</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765031</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283092</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0096/0500232342-0096.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">97</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765029</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283096</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0095/0500232342-0095.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">96</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765027</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283100</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0094/0500232342-0094.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">95</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765025</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283104</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0093/0500232342-0093.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">94</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765023</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283108</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0092/0500232342-0092.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">93</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765021</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283112</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0091/0500232342-0091.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">92</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765019</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283116</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0090/0500232342-0090.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">91</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765017</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283120</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0089/0500232342-0089.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">90</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765015</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283124</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0088/0500232342-0088.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">89</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765013</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283128</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0087/0500232342-0087.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">88</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765011</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283132</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0086/0500232342-0086.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">87</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765009</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283136</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0085/0500232342-0085.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">86</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765007</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283140</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0084/0500232342-0084.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">85</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765005</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283144</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0083/0500232342-0083.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">84</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765003</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283148</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0082/0500232342-0082.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">83</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765001</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283152</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0081/0500232342-0081.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">82</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764999</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283156</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0080/0500232342-0080.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">81</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764997</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283160</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0079/0500232342-0079.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">80</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764995</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283164</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0078/0500232342-0078.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">79</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764993</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283168</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0077/0500232342-0077.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">78</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764991</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283172</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0076/0500232342-0076.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">77</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764989</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283176</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0075/0500232342-0075.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">76</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764987</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283180</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0074/0500232342-0074.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">75</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764985</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283184</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0073/0500232342-0073.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">74</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764983</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283188</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0072/0500232342-0072.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">73</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764981</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283192</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0071/0500232342-0071.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">72</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764979</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283196</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0070/0500232342-0070.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">71</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764977</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283200</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0069/0500232342-0069.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">70</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764975</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283204</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0068/0500232342-0068.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">69</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764973</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283208</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0067/0500232342-0067.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">68</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764971</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283252</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0056/0500232342-0056.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">57</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764949</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283256</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0055/0500232342-0055.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">56</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764947</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283260</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0054/0500232342-0054.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">55</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764945</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283264</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0053/0500232342-0053.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">54</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764943</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283268</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0052/0500232342-0052.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">53</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764941</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283272</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0051/0500232342-0051.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">52</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764939</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283276</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0050/0500232342-0050.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">51</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764937</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283280</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0049/0500232342-0049.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">50</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764935</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283284</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0048/0500232342-0048.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">49</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764933</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283288</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0047/0500232342-0047.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">48</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764931</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283292</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0046/0500232342-0046.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">47</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764929</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283296</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0045/0500232342-0045.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">46</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764927</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283300</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0044/0500232342-0044.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">45</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764925</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283304</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0043/0500232342-0043.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">44</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764923</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283308</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0042/0500232342-0042.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">43</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764921</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283312</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0041/0500232342-0041.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">42</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764919</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283316</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0040/0500232342-0040.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">41</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764917</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283320</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0039/0500232342-0039.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">40</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764915</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283324</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0038/0500232342-0038.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">39</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764913</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283328</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0037/0500232342-0037.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">38</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764911</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283332</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0036/0500232342-0036.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">37</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764909</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283336</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0035/0500232342-0035.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">36</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764907</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283340</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0034/0500232342-0034.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">35</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764905</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283344</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0033/0500232342-0033.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">34</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764903</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283348</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0032/0500232342-0032.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">33</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764901</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283352</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0031/0500232342-0031.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">32</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764899</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283356</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0030/0500232342-0030.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">31</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764897</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283360</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0029/0500232342-0029.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">30</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764895</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283364</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0028/0500232342-0028.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">29</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764893</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283368</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0027/0500232342-0027.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">28</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764891</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283372</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0026/0500232342-0026.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">27</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764889</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283376</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0025/0500232342-0025.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">26</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764887</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283380</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0024/0500232342-0024.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">25</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764885</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283384</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0023/0500232342-0023.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">24</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764883</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283388</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0022/0500232342-0022.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">23</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764881</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283392</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0021/0500232342-0021.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">22</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764879</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283396</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0020/0500232342-0020.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">21</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764877</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283400</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0019/0500232342-0019.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">20</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764875</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283404</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0018/0500232342-0018.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">19</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764873</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283408</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0017/0500232342-0017.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">18</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764871</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283412</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0016/0500232342-0016.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">17</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764869</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283416</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0015/0500232342-0015.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">16</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764867</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283420</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0014/0500232342-0014.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">15</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764865</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283424</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0013/0500232342-0013.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">14</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764863</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283428</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0012/0500232342-0012.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">13</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764861</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283432</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0011/0500232342-0011.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">12</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764859</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283436</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0010/0500232342-0010.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">11</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764857</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283440</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0009/0500232342-0009.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">10</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764855</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283444</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0008/0500232342-0008.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">9</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764853</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283448</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0007/0500232342-0007.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">8</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764851</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283452</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0006/0500232342-0006.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">7</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764849</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283456</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0005/0500232342-0005.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">6</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764847</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283460</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0004/0500232342-0004.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">5</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764845</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283464</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0003/0500232342-0003.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">4</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764843</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283468</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0002/0500232342-0002.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">3</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764841</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283472</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0001/0500232342-0001.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">2</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764839</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283476</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0140/0500232342-0140.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">141</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765117</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283480</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0139/0500232342-0139.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">140</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765115</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283484</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0138/0500232342-0138.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">139</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765113</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283488</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0137/0500232342-0137.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">138</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765111</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283492</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0136/0500232342-0136.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">137</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765109</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283496</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0135/0500232342-0135.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">136</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765107</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283500</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0134/0500232342-0134.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">135</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765105</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283504</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0133/0500232342-0133.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">134</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765103</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283508</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0132/0500232342-0132.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">133</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765101</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283512</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0131/0500232342-0131.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">132</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765099</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283516</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0130/0500232342-0130.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">131</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765097</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283520</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0129/0500232342-0129.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">130</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765095</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283524</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0128/0500232342-0128.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">129</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765093</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">false</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283528</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0127/0500232342-0127.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">128</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282765091</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283212</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0066/0500232342-0066.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">67</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764969</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283216</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0065/0500232342-0065.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">66</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764967</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283220</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0064/0500232342-0064.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">65</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764965</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283224</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0063/0500232342-0063.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">64</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764963</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283228</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0062/0500232342-0062.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">63</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764961</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283232</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0061/0500232342-0061.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">62</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764959</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283236</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0060/0500232342-0060.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">61</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764957</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283240</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0059/0500232342-0059.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">60</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764955</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283244</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0058/0500232342-0058.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">59</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764953</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+    <section-image>
+      <annotated type="boolean">true</annotated>
+      <bits-per-component type="integer">16</bits-per-component>
+      <data-set-id type="integer">183282970</data-set-id>
+      <expression-path nil="true"/>
+      <failed type="boolean">false</failed>
+      <height type="integer">29984</height>
+      <id type="integer">183283248</id>
+      <image-height type="integer">30000</image-height>
+      <image-type>Primary</image-type>
+      <image-width type="integer">40000</image-width>
+      <lims1-id type="integer" nil="true"/>
+      <number-of-components type="integer">3</number-of-components>
+      <path>/external/connectivity/prod226/0500232342-0057/0500232342-0057.aff</path>
+      <resolution type="float">0.35</resolution>
+      <section-number type="integer">58</section-number>
+      <specimen-id type="integer" nil="true"/>
+      <structure-id type="integer" nil="true"/>
+      <tier-count type="integer">9</tier-count>
+      <width type="integer">39984</width>
+      <x type="integer">0</x>
+      <y type="integer">0</y>
+      <alignment2d>
+        <id type="integer">282764951</id>
+        <tvs>2.85714,0.0,0.0,2.85714,0.0,0.0</tvs>
+        <tsv>0.35,0.0,0.0,0.35,0.0,0.0</tsv>
+      </alignment2d>
+    </section-image>
+  </section-images>
+  <plane_of_section>coronal</plane_of_section>
+  <age>11 wks</age>
+</section-data-set>

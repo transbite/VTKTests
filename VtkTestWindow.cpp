@@ -27,6 +27,7 @@
 #include <vtkOpenGLRenderer.h>
 #include <vtkOpenGLGPUVolumeRayCastMapper.h>
 #include <vtkOpenGLVolumeTextureMapper3D.h>
+#include <vtkFixedPointVolumeRayCastMapper.h>
 #include <vtkMetaImageReader.h>
 
 #include <QDebug>
@@ -351,6 +352,8 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
 
     m_volume = vtkVolume::New();
     m_volumeMapper = vtkSmartVolumeMapper::New();
+    //m_volumeMapper = vtkOpenGLVolumeTextureMapper3D::New();
+    //m_volumeMapper = vtkFixedPointVolumeRayCastMapper::New();
 
     m_metaImageReader = vtkMetaImageReader::New();
 }
@@ -398,8 +401,8 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
     m_imageData = imageData;
 
     //test-remove
-    vtkRenderWindowInteractor* irn = this->GetRenderWindow()->GetInteractor();
-    irn->SetDesiredUpdateRate(30.0);
+//    vtkRenderWindowInteractor* irn = this->GetRenderWindow()->GetInteractor();
+//    irn->SetDesiredUpdateRate(30.0);
     //
 
     //m_volume = vtkVolume::New();
@@ -439,6 +442,9 @@ void VtkTestWindow::addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData*
     property->SetSpecular(0.2);
     property->SetSpecularPower(10.0);
     property->SetScalarOpacityUnitDistance(0.8919);
+
+    double bounds[6];
+    m_volume->GetBounds(bounds);
 
     ren1->AddVolume(m_volume);
     ren1->ResetCamera();
@@ -487,6 +493,9 @@ void VtkTestWindow::addImage(const QString &imageFile)
     property->SetSpecular(0.2);
     property->SetSpecularPower(10.0);
     property->SetScalarOpacityUnitDistance(0.8919);
+
+    double bounds[6];
+    m_volume->GetBounds(bounds);
 
     ren1->AddVolume(m_volume);
     ren1->ResetCamera();

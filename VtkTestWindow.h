@@ -9,6 +9,7 @@ class vtkMetaImageReader;
 class vtkImageData;
 class vtkVolume;
 class vtkSmartVolumeMapper;
+class vtkVolumeMapper;
 
 class VtkTestWindow : public QVTKWidget
 {
@@ -25,6 +26,6 @@ private:
     vtkMetaImageReader* m_metaImageReader;
     vtkImageData* m_imageData;
     vtkVolume* m_volume;
-    vtkSmartVolumeMapper* m_volumeMapper;
+    /*vtkSmartVolumeMapper**/vtkVolumeMapper* m_volumeMapper;
 };
 

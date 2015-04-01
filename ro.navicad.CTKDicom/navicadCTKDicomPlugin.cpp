@@ -22,6 +22,8 @@
 #include "navicadCTKDicomPlugin.h"
 #include "navicadCTKDicomPluginInterface.h"
 
+#define NOMINMAX
+
 #include <QtPlugin>
 #include <QDebug>
 

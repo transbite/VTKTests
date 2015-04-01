@@ -282,7 +282,7 @@ public:
 };
 
 VtkTestWindow::VtkTestWindow(QWidget* parent)
-    : QVTKWidget2(parent)
+    : QVTKWidget(parent)
 {
 //	vtkAxesActor* axes = vtkAxesActor::New();
 //	axes->SetScale(3.0);
@@ -321,7 +321,7 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
 //	ren1->AddActor( coneActor2 );
 //	ren1->AddActor(axes);
 
-    /*vtkRenderWindow**/ vtkGenericOpenGLRenderWindow* renWin = this->GetRenderWindow();
+    vtkRenderWindow* /*vtkGenericOpenGLRenderWindow**/ renWin = this->GetRenderWindow();
 	renWin->AddRenderer(ren1);
 
 //    vtkRenderWindowInteractor *iren = renWin->GetInteractor();//vtkRenderWindowInteractor::New();
@@ -468,15 +468,17 @@ void VtkTestWindow::addImage(const QString &imageFile)
     m_volume->SetMapper(m_volumeMapper);
 
     //CT_Skin
-    colorFun->AddRGBPoint( -3024, 0, 0, 0, 0.5, 0.0 );
-    colorFun->AddRGBPoint( -1000, .62, .36, .18, 0.5, 0.0 );
-    colorFun->AddRGBPoint( -500, .88, .60, .29, 0.33, 0.45 );
-    colorFun->AddRGBPoint( 3071, .83, .66, 1, 0.5, 0.0 );
+	colorFun->AddRGBPoint( -3024, 0, 0, 0, 0.5, 0.0 );
+	colorFun->AddRGBPoint( -155, .55, .25, .15, 0.5, .92 );
+	colorFun->AddRGBPoint( 217, .88, .60, .29, 0.33, 0.45 );
+	colorFun->AddRGBPoint( 420, 1, .94, .95, 0.5, 0.0 );
+	colorFun->AddRGBPoint( 3071, .83, .66, 1, 0.5, 0.0 );
 
-    opacityFun->AddPoint(-3024, 0, 0.5, 0.0 );
-    opacityFun->AddPoint(-1000, 0, 0.5, 0.0 );
-    opacityFun->AddPoint(-500, 1.0, 0.33, 0.45 );
-    opacityFun->AddPoint(3071, 1.0, 0.5, 0.0);
+	opacityFun->AddPoint(-3024, 0, 0.5, 0.0 );
+	opacityFun->AddPoint(-155, 0, 0.5, 0.92 );
+	opacityFun->AddPoint(217, .68, 0.33, 0.45 );
+	opacityFun->AddPoint(420,.83, 0.5, 0.0);
+	opacityFun->AddPoint(3071, .80, 0.5, 0.0);
 
     m_volumeMapper->SetBlendModeToComposite();
     property->ShadeOn();

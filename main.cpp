@@ -19,7 +19,9 @@ int main(int argc, char *argv[])
     a.setOrganizationDomain("navicad.ro");
     a.setApplicationName("VTKTests");
 
-    ctkPluginFrameworkLauncher::addSearchPath("plugins",true);
+	QString pluginsPath = qApp->applicationDirPath();
+	pluginsPath += "/plugins/";
+    ctkPluginFrameworkLauncher::addSearchPath(pluginsPath, true);
     ctkPluginFrameworkLauncher::start();
 //    bool eventadmin_started = ctkPluginFrameworkLauncher::start("org.commontk.eventadmin");
 //    if(eventadmin_started)

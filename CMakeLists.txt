@@ -76,7 +76,9 @@ endif()
 ##    message("- " ${flag})
 ##endforeach(flag)
 
-set(SRCS main.cpp mainwindow.cpp VtkTestWindow.cpp)
+set(SRCS main.cpp mainwindow.cpp mainwindow.h 
+	VtkTestWindow.cpp VtkTestWindow.h
+	)
 set(FRMS mainwindow.ui)
 
 qt5_wrap_ui(FRMS_HDRS ${FRMS})

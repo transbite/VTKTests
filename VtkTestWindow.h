@@ -14,19 +14,13 @@ class vtkVolumeMapper;
 
 class VtkTestWindow : public QVTKWidget2
 {
+    Q_OBJECT
+
 public:
     VtkTestWindow(QWidget* parent = nullptr);
-	~VtkTestWindow();
-
-    void addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
-    void addImage(const QString& imageFile);
+    ~VtkTestWindow();
 
 private:
-    vtkSmartPointer<vtkRenderer> ren1;
-    vtkSmartPointer<vtkDICOMImageReader> m_dicomReader;
-    vtkSmartPointer<vtkMetaImageReader> m_metaImageReader;
-    vtkSmartPointer<vtkImageData> m_imageData;
-    vtkSmartPointer<vtkVolume> m_volume;
-    vtkSmartPointer<vtkSmartVolumeMapper> m_volumeMapper;
+    vtkSmartPointer<vtkRenderer> m_renderer;
 };
 

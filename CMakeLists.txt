@@ -31,8 +31,11 @@ endif()
 
 set(SRCS main.cpp mainwindow.cpp mainwindow.h 
 	VtkTestWindow.cpp VtkTestWindow.h
+	VtkTests.cpp VtkTests.h
+	VtkTestsVolume.cpp
+	GraphWidget.cpp GraphWidget.h
 	)
-set(FRMS mainwindow.ui)
+set(FRMS mainwindow.ui GraphWidget.ui)
 
 qt5_wrap_ui(FRMS_HDRS ${FRMS})
 

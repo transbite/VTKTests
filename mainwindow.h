@@ -3,13 +3,14 @@
 
 #include <QMainWindow>
 #include <QMap>
+#include <QScopedPointer>
 
 namespace Ui {
 class MainWindow;
 }
 
 class QDockWidget;
-class VtkTestWindow;
+class VtkTests;
 
 class MainWindow : public QMainWindow
 {
@@ -27,7 +28,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    VtkTestWindow* m_vtkTestWindow;
+    QScopedPointer<VtkTests> m_vtkTests;
 
     QMap<QString, QDockWidget*> m_docks;
 };

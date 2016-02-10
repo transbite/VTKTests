@@ -1,0 +1,118 @@
+#include "VtkTests.h"
+
+#include <vtkConeSource.h>
+#include <vtkPolyDataMapper.h>
+#include <vtkRenderWindow.h>
+#include <vtkCamera.h>
+#include <vtkActor.h>
+#include <vtkRenderer.h>
+#include <vtkProperty.h>
+#include <vtkInteractorStyleTrackballCamera.h>
+#include <vtkBoxWidget.h>
+#include <vtkTransform.h>
+#include <vtkAxesActor.h>
+#include <vtkCommand.h>
+#include <vtkRenderer.h>
+#include <vtkDICOMImageReader.h>
+#include <vtkImageData.h>
+
+#include <QMessageBox>
+#include <QDebug>
+
+class vtkMyCallback : public vtkCommand
+{
+public:
+    static vtkMyCallback *New()
+    { return new vtkMyCallback; }
+    virtual void Execute(vtkObject *caller, unsigned long, void*)
+    {
+        vtkTransform *t = vtkTransform::New();
+        vtkBoxWidget *widget = reinterpret_cast<vtkBoxWidget*>(caller);
+        widget->GetTransform(t);
+        widget->GetProp3D()->SetUserTransform(t);
+        t->Delete();
+    }
+};
+
+extern vtkSmartPointer<vtkRenderer> ren1;
+
+void addCone()
+{
+    vtkAxesActor* axes = vtkAxesActor::New();
+    axes->SetScale(3.0);
+
+    vtkConeSource *cone = vtkConeSource::New();
+    cone->SetHeight( 3.0 );
+    cone->SetRadius( 1.0 );
+    cone->SetResolution( 100 );
+
+    vtkPolyDataMapper *coneMapper = vtkPolyDataMapper::New();
+    coneMapper->SetInputConnection( cone->GetOutputPort() );
+
+    vtkActor *coneActor = vtkActor::New();
+    coneActor->SetMapper( coneMapper );
+    coneActor->GetProperty()->SetColor(0.2, 0.63, 0.79);
+    coneActor->GetProperty()->SetDiffuse(0.7);
+    coneActor->GetProperty()->SetSpecular(0.4);
+    coneActor->GetProperty()->SetSpecularPower(20);
+    coneActor->GetProperty()->SetOpacity(0.45);
+
+    vtkProperty *property = vtkProperty::New();
+    property->SetColor(1.0, 0.3882, 0.2784);
+    property->SetOpacity(0.5);
+    property->SetDiffuse(0.7);
+    property->SetSpecular(0.9);
+    property->SetSpecularPower(50);
+    vtkActor *coneActor2 = vtkActor::New();
+    coneActor2->SetMapper(coneMapper);
+    coneActor2->GetProperty()->SetColor(0.2, 0.63, 0.79);
+    coneActor2->SetProperty(property);
+    coneActor2->SetPosition(0, 2, 5);
+
+    ren1->AddActor( coneActor );
+    ren1->AddActor( coneActor2 );
+    ren1->AddActor(axes);
+
+    vtkBoxWidget *boxWidget = vtkBoxWidget::New();
+    vtkRenderWindowInteractor* iren = ren1->GetRenderWindow()->GetInteractor();
+    boxWidget->SetInteractor(iren);
+    boxWidget->SetPlaceFactor(1.0);
+
+    boxWidget->SetProp3D(coneActor);
+    boxWidget->PlaceWidget();
+
+    vtkMyCallback *callback = vtkMyCallback::New();
+    boxWidget->AddObserver(vtkCommand::InteractionEvent, callback);
+
+    boxWidget->On();
+}
+
+extern void addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
+extern void addDicomDirectory(const QString &dirName);
+extern void addImage(const QString &imageFile);
+
+VtkTests::VtkTests()
+{
+    //addCone();
+}
+
+VtkTests::~VtkTests()
+{
+
+}
+
+void VtkTests::executeCommand(const Commands &command, const QString &arguments)
+{
+    switch(command)
+    {
+    case Commands::LOAD_DICOM:
+        addDicomDirectory(arguments);
+        break;
+    case Commands::LOAD_IMAGE:
+        addImage(arguments);
+        break;
+
+    default:
+        break;
+    }
+}

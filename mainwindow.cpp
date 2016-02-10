@@ -17,6 +17,11 @@ MainWindow::MainWindow(QWidget *parent) :
     m_vtkTests.reset(new VtkTests());
     bool b = connect(ui->actionQuit, &QAction::triggered, qApp, &QApplication::quit);
     Q_ASSERT(b);
+
+    b = connect(m_vtkTests.data(), &VtkTests::createDockWidget, this, &MainWindow::on_createDockWidget);
+    Q_ASSERT(b);
+    b = connect(m_vtkTests.data(), &VtkTests::removeDockWidget, this, &MainWindow::on_removeDockWidget);
+    Q_ASSERT(b);
 }
 
 MainWindow::~MainWindow()
@@ -46,4 +51,26 @@ void MainWindow::on_actionLoadDicom_triggered()
     }
 
     m_vtkTests->executeCommand(VtkTests::Commands::LOAD_DICOM, dirName);
+}
+
+void MainWindow::on_createDockWidget(QWidget *contentWidget)
+{
+    QString windowTitle = contentWidget->windowTitle();
+    QDockWidget* dock = new QDockWidget(this);
+    dock->setWindowTitle(windowTitle);
+    contentWidget->setParent(dock);
+    dock->setMinimumWidth(350);
+    dock->setFloating(false);
+    dock->setWidget(contentWidget);
+    this->addDockWidget(Qt::LeftDockWidgetArea, dock);
+    QAction* dockToggleAction = dock->toggleViewAction();
+    ui->menuWindow->addAction(dockToggleAction);
+
+    m_docks.insert(windowTitle, dock);
+}
+
+void MainWindow::on_removeDockWidget(const QString &windowTitle)
+{
+    QDockWidget* dock = m_docks[windowTitle];
+    dock->deleteLater();
 }

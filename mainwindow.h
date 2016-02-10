@@ -25,6 +25,8 @@ public:
 private slots:
     void on_actionLoadImage_triggered();
     void on_actionLoadDicom_triggered();
+    void on_createDockWidget(QWidget* contentWidget);
+    void on_removeDockWidget(const QString& windowTitle);
 
 private:
     Ui::MainWindow *ui;

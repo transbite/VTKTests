@@ -4,13 +4,7 @@
 #include <QVTKWidget.h>
 #include <vtkSmartPointer.h>
 
-class vtkRenderer;
-class vtkDICOMImageReader;
-class vtkMetaImageReader;
-class vtkImageData;
-class vtkVolume;
-class vtkSmartVolumeMapper;
-class vtkVolumeMapper;
+#include <QTimer>
 
 class VtkTestWindow : public QVTKWidget2
 {
@@ -20,7 +14,13 @@ public:
     VtkTestWindow(QWidget* parent = nullptr);
     ~VtkTestWindow();
 
+    void startAnimation();
+
+private slots:
+    void onTimer();
+
 private:
     vtkSmartPointer<vtkRenderer> m_renderer;
+    QTimer m_timer;
 };
 

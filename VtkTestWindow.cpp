@@ -41,6 +41,9 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     {
         qDebug() << "GL_ARB_compatibility cannot be loaded.";
     }
+
+    connect(&m_timer, &QTimer::timeout, this, &VtkTestWindow::onTimer);
+    startAnimation();
 }
 
 
@@ -49,4 +52,12 @@ VtkTestWindow::~VtkTestWindow()
 
 }
 
+void VtkTestWindow::onTimer()
+{
+    this->GetRenderWindow()->Render();
+}
 
+void VtkTestWindow::startAnimation()
+{
+    m_timer.start(1000.0 / 60.0 );
+}

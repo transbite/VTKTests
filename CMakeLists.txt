@@ -34,6 +34,7 @@ set(SRCS main.cpp mainwindow.cpp mainwindow.h
 	VtkTests.cpp VtkTests.h
 	VtkTestsVolume.cpp
 	GraphWidget.cpp GraphWidget.h
+	VolumePropertiesController.cpp VolumePropertiesController.h
 	)
 set(FRMS mainwindow.ui GraphWidget.ui)
 

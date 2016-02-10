@@ -1,4 +1,6 @@
 #include "VtkTests.h"
+#include "VolumePropertiesController.h"
+#include "GraphWidget.h"
 
 #include <vtkConeSource.h>
 #include <vtkPolyDataMapper.h>
@@ -87,11 +89,12 @@ void addCone()
     boxWidget->On();
 }
 
-extern void addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
-extern void addDicomDirectory(const QString &dirName);
-extern void addImage(const QString &imageFile);
+QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
+QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirName);
+QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile);
 
-VtkTests::VtkTests()
+VtkTests::VtkTests(QObject* parent)
+    : QObject(parent)
 {
     //addCone();
 }
@@ -106,10 +109,22 @@ void VtkTests::executeCommand(const Commands &command, const QString &arguments)
     switch(command)
     {
     case Commands::LOAD_DICOM:
-        addDicomDirectory(arguments);
+        {
+            QSharedPointer<VolumePropertiesController> volContr = addDicomDirectory(arguments);
+            GraphWidget* graphWidget = volContr->graphWidget();
+            QString windowTitle = graphWidget->windowTitle();
+            m_volumeControllers.insert(windowTitle, volContr);
+            emit createDockWidget(graphWidget);
+        }
         break;
     case Commands::LOAD_IMAGE:
-        addImage(arguments);
+        {
+            QSharedPointer<VolumePropertiesController> volContr = addImage(arguments);
+            GraphWidget* graphWidget = volContr->graphWidget();
+            QString windowTitle = graphWidget->windowTitle();
+            m_volumeControllers.insert(windowTitle, volContr);
+            emit createDockWidget(graphWidget);
+        }
         break;
 
     default:

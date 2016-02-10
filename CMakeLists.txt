@@ -19,62 +19,15 @@ endif()
 
 find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
-
-find_package(CTK REQUIRED)
-
-if(CTK_FOUND)
-    message("CTK package found in " ${CTK_DIR})
-else()
-    message("Could not find CTK package?")
+if(VTK_FOUND)
+    message("VTK_VERSION:" ${VTK_VERSION})
 endif()
-
-include_directories(${CTK_INCLUDE_DIRS})
-
-set(PLUGIN_BUILD_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/plugins")
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PLUGIN_BUILD_DIRECTORY})
-
-add_subdirectory(SimpleQtPlugin)
-
-add_subdirectory(SimpleCTKPlugin)
-
-add_subdirectory(ro.navicad.VTKDicom)
-
-add_subdirectory(ro.navicad.CTKDicom)
-
-###add_subdirectory(GeneratedCTKPlugin/Generated.CTK)
-
-##message("VTK libraries:")
-##foreach(lib ${VTK_LIBRARIES})
-##    message("-" ${lib})
-##endforeach(lib)
-##message("VTK include directories: ")
-##foreach(dir ${VTK_INCLUDE_DIRS})
-##    message("-" ${dir})
-##endforeach(dir)
-##message("VTK use file: " ${VTK_USE_FILE})
-
-##include_directories(${Qt5Widgets_Includes})
-##include_directories(${Qt5OpenGL_Includes})
-
-##message("1. cxx flags:")
-##foreach(flag ${CMAKE_CXX_FLAGS})
-##    message("- " ${flag})
-##endforeach(flag)
-
-##set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" "${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}" "-std=c++0x")
-
-##set(CMAKE_CXX_FLAGS "-std=c++0x")
 
 if(UNIX)
 ##if(CMAKE_COMPILER_IS_GNUCXX)
     add_definitions(-std=c++0x)
 ##endif()
 endif()
-
-##message("2. cxx flags:")
-##foreach(flag ${CMAKE_CXX_FLAGS})
-##    message("- " ${flag})
-##endforeach(flag)
 
 set(SRCS main.cpp mainwindow.cpp mainwindow.h 
 	VtkTestWindow.cpp VtkTestWindow.h
@@ -86,10 +39,6 @@ qt5_wrap_ui(FRMS_HDRS ${FRMS})
 add_executable(VTKTests ${SRCS} ${FRMS_HDRS})
 
 target_link_libraries(VTKTests ${VTK_LIBRARIES})
-target_link_libraries(VTKTests CTKPluginFramework)
-
-##target_link_libraries(VTKTests ${Qt5Widgets_LIBRARIES})
-##target_link_libraries(VTKTests ${Qt5OpenGL_LIBRARIES})
 
 qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets Concurrent)
 

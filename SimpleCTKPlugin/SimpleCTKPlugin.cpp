@@ -1,3 +1,0 @@
-#include "SimpleCTKPlugin.h"
-
-

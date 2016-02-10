@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+    //a.setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
 #ifdef __unix__
     setlocale(LC_NUMERIC,"C");
 #endif

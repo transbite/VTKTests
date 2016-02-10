@@ -25,7 +25,7 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     vtkSmartPointer<vtkInteractorStyleTrackballCamera> style_1 = vtkSmartPointer<vtkInteractorStyleTrackballCamera>::New();
     vtkSmartPointer<vtkInteractorStyle> style_2 = vtkSmartPointer<vtkInteractorStyle>::New();
 
-    //iren->SetInteractorStyle(style_1);
+    iren->SetInteractorStyle(style_1);
 	
     this->setGeometry(this->pos().x(), this->pos().y(), 500, 500);
     ren1->ResetCamera();

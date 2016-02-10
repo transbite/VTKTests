@@ -12,6 +12,7 @@
 #include <vtkRenderer.h>
 #include <vtkMetaImageReader.h>
 #include <vtkInformation.h>
+#include <vtkGPUVolumeRayCastMapper.h>
 
 #include <QSharedPointer>
 #include <QMessageBox>
@@ -22,7 +23,9 @@ static int volCount = 0;
 
 QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
 {
-    vtkSmartPointer<vtkSmartVolumeMapper> volumeMapper = vtkSmartPointer<vtkSmartVolumeMapper>::New();
+//    vtkSmartPointer<vtkSmartVolumeMapper> volumeMapper = vtkSmartPointer<vtkSmartVolumeMapper>::New();
+    vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
+    volumeMapper->SetSampleDistance(0.1);
     volumeMapper->SetInputConnection(dicomReader->GetOutputPort());
 
     // Create our transfer function

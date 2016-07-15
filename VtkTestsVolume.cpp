@@ -25,8 +25,9 @@ QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dic
 {
 //    vtkSmartPointer<vtkSmartVolumeMapper> volumeMapper = vtkSmartPointer<vtkSmartVolumeMapper>::New();
     vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
-    volumeMapper->SetSampleDistance(0.1);
-    volumeMapper->SetInputConnection(dicomReader->GetOutputPort());
+    volumeMapper->SetSampleDistance(0.5);
+    //volumeMapper->SetInputConnection(dicomReader->GetOutputPort());
+    volumeMapper->SetInputData(dicomReader->GetOutput());
 
     // Create our transfer function
     vtkSmartPointer<vtkColorTransferFunction> colorFun = vtkSmartPointer<vtkColorTransferFunction>::New();

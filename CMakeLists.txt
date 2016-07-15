@@ -10,7 +10,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5OpenGL REQUIRED)
 find_package(Qt5Sql REQUIRED)
-find_package(Qt5WebKitWidgets REQUIRED)
+#find_package(Qt5WebKitWidgets REQUIRED)
 find_package(Qt5Concurrent REQUIRED)
 
 if(Qt5Widgets_FOUND)
@@ -40,10 +40,10 @@ set(FRMS mainwindow.ui GraphWidget.ui)
 
 qt5_wrap_ui(FRMS_HDRS ${FRMS})
 
-add_executable(VTKTests ${SRCS} ${FRMS_HDRS})
+add_executable(VTKTests MACOSX_BUNDLE ${SRCS} ${FRMS_HDRS})
 
 target_link_libraries(VTKTests ${VTK_LIBRARIES})
 
-qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets Concurrent)
-
+#qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets Concurrent)
+qt5_use_modules(VTKTests Widgets OpenGL Sql Concurrent)
 

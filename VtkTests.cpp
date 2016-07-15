@@ -93,10 +93,41 @@ QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dic
 QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirName);
 QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile);
 
+//VTK User's Guide Ch 6.2
+#include <vtkQuadric.h>
+#include <vtkSampleFunction.h>
+#include <vtkExtractVOI.h>
+#include <vtkContourFilter.h>
+void testVtkExtractVOI()
+{
+    vtkSmartPointer<vtkQuadric> quadric = vtkSmartPointer<vtkQuadric>::New();
+    quadric->SetCoefficients(0.5, 1, 0.2, 0, 0.1, 0, 0, 0.2, 0, 0);
+    vtkSmartPointer<vtkSampleFunction> sample = vtkSmartPointer<vtkSampleFunction>::New();
+    sample->SetSampleDimensions(128, 128, 128);
+    sample->SetImplicitFunction(quadric);
+    sample->ComputeNormalsOff();
+
+    vtkSmartPointer<vtkExtractVOI> extract = vtkSmartPointer<vtkExtractVOI>::New();
+    extract->SetInputConnection(sample->GetOutputPort());
+    extract->SetVOI(0, 127, 0, 127, 64, 127);
+    vtkSmartPointer<vtkContourFilter> contours = vtkSmartPointer<vtkContourFilter>::New();
+    contours->SetInputConnection(extract->GetOutputPort());
+//    contours->SetInputConnection(sample->GetOutputPort());
+    contours->GenerateValues(10, 0.0, 1.2);
+    vtkSmartPointer<vtkPolyDataMapper> contMapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+    contMapper->SetInputConnection(contours->GetOutputPort());
+    contMapper->SetScalarRange(0.0, 1.2);
+    vtkSmartPointer<vtkActor> contActor = vtkSmartPointer<vtkActor>::New();
+    contActor->SetMapper(contMapper);
+
+    ren1->AddActor(contActor);
+}
+
 VtkTests::VtkTests(QObject* parent)
     : QObject(parent)
 {
     //addCone();
+    testVtkExtractVOI();
 }
 
 VtkTests::~VtkTests()

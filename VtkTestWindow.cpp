@@ -31,16 +31,18 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     ren1->ResetCamera();
 
     //test OpenGL extensions
-    vtkSmartPointer<vtkOpenGLExtensionManager> extManager = vtkSmartPointer<vtkOpenGLExtensionManager>::New();
-    extManager->SetRenderWindow(renWin);
-    if(extManager->ExtensionSupported("GL_ARB_compatibility") != 0)
-    {
-        extManager->LoadExtension("GL_ARB_compatibility");
-    }
-    else
-    {
-        qDebug() << "GL_ARB_compatibility cannot be loaded.";
-    }
+//    vtkSmartPointer<vtkOpenGLExtensionManager> extManager = vtkSmartPointer<vtkOpenGLExtensionManager>::New();
+//    extManager->SetRenderWindow(renWin);
+//    if(extManager->ExtensionSupported("GL_ARB_compatibility") != 0)
+//    {
+//        extManager->LoadExtension("GL_ARB_compatibility");
+//    }
+//    else
+//    {
+//        qDebug() << "GL_ARB_compatibility cannot be loaded.";
+//    }
+
+    this->setAttribute(Qt::WA_DontCreateNativeAncestors);
 
     connect(&m_timer, &QTimer::timeout, this, &VtkTestWindow::onTimer);
     startAnimation();
@@ -54,7 +56,8 @@ VtkTestWindow::~VtkTestWindow()
 
 void VtkTestWindow::onTimer()
 {
-    this->GetRenderWindow()->Render();
+    //this->GetRenderWindow()->Render();
+    this->update();
 }
 
 void VtkTestWindow::startAnimation()

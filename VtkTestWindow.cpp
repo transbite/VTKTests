@@ -3,7 +3,7 @@
 #include <vtkRenderer.h>
 #include <vtkGenericOpenGLRenderWindow.h>
 #include <vtkInteractorStyleTrackballCamera.h>
-#include <vtkOpenGLExtensionManager.h>
+//#include <vtkOpenGLExtensionManager.h>
 
 #include <QDebug>
 

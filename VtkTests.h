@@ -27,6 +27,7 @@ public:
 signals:
     void createDockWidget(QWidget* contentWidget);
     void removeDockWidget(const QString& windowTitle);
+    void volumePropertiesControllerCreated(VolumePropertiesController*);
 
 private:
     QMap<QString, QSharedPointer<VolumePropertiesController>> m_volumeControllers;

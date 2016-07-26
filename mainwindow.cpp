@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "VtkTests.h"
+#include "VtkTestsImage2DWindow.h"
+#include "VolumePropertiesController.h"
 
 #include <QDir>
 #include <QApplication>
@@ -14,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    m_2DWindows[AXIAL] = ui->vtkAxial;
+    m_2DWindows[SAGITTAL] = ui->vtkSagittal;
+    m_2DWindows[CORONAL] = ui->vtkCoronal;
     m_vtkTests.reset(new VtkTests());
     bool b = connect(ui->actionQuit, &QAction::triggered, qApp, &QApplication::quit);
     Q_ASSERT(b);
@@ -22,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Q_ASSERT(b);
     b = connect(m_vtkTests.data(), &VtkTests::removeDockWidget, this, &MainWindow::on_removeDockWidget);
     Q_ASSERT(b);
+    connect(m_vtkTests.data(), &VtkTests::volumePropertiesControllerCreated, this, &MainWindow::on_VolumePropertiesControllerCreated);
 }
 
 MainWindow::~MainWindow()
@@ -73,4 +79,12 @@ void MainWindow::on_removeDockWidget(const QString &windowTitle)
 {
     QDockWidget* dock = m_docks[windowTitle];
     dock->deleteLater();
+}
+
+void MainWindow::on_VolumePropertiesControllerCreated(VolumePropertiesController *controller)
+{
+    for(int i = 0; i < COUNT; ++i)
+    {
+        m_2DWindows[i]->setInputData(controller->imageData());
+    }
 }

@@ -6,6 +6,7 @@
 #include <vtkColorTransferFunction.h>
 #include <vtkRenderer.h>
 #include <vtkSmartPointer.h>
+#include <vtkImageData.h>
 
 #include <vector>
 
@@ -15,6 +16,7 @@ VolumePropertiesController::VolumePropertiesController(QObject *parent)
     : QObject(parent)
     , m_volumeProperty(nullptr)
     , m_graphWidget(nullptr)
+    , m_imageData(nullptr)
 {
 
 }
@@ -24,7 +26,7 @@ VolumePropertiesController::~VolumePropertiesController()
 
 }
 
-void VolumePropertiesController::setData(vtkVolumeProperty *volumeProperty, GraphWidget *graphWidget)
+void VolumePropertiesController::setData(vtkVolumeProperty *volumeProperty, GraphWidget *graphWidget, vtkImageData *imageData)
 {
     m_volumeProperty = volumeProperty;
     m_graphWidget = graphWidget;
@@ -36,11 +38,18 @@ void VolumePropertiesController::setData(vtkVolumeProperty *volumeProperty, Grap
     onGraphColorChanged(1);
     onGraphColorChanged(2);
     m_graphWidget->Points(3);
+
+    m_imageData = imageData;
 }
 
 GraphWidget* VolumePropertiesController::graphWidget()
 {
     return m_graphWidget;
+}
+
+vtkImageData* VolumePropertiesController::imageData()
+{
+    return m_imageData;
 }
 
 void VolumePropertiesController::onGraphColorChanged(int channel)

@@ -12,7 +12,8 @@
 #include <vtkRenderer.h>
 #include <vtkMetaImageReader.h>
 #include <vtkInformation.h>
-#include <vtkGPUVolumeRayCastMapper.h>
+//#include <vtkGPUVolumeRayCastMapper.h>
+#include <vtkOpenGLGPUVolumeRayCastMapper.h>
 
 #include <QSharedPointer>
 #include <QMessageBox>
@@ -24,7 +25,8 @@ static int volCount = 0;
 QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
 {
 //    vtkSmartPointer<vtkSmartVolumeMapper> volumeMapper = vtkSmartPointer<vtkSmartVolumeMapper>::New();
-    vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
+//    vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
+    vtkSmartPointer<vtkOpenGLGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkOpenGLGPUVolumeRayCastMapper>::New();
     volumeMapper->SetSampleDistance(0.5);
     //volumeMapper->SetInputConnection(dicomReader->GetOutputPort());
     volumeMapper->SetInputData(dicomReader->GetOutput());
@@ -58,7 +60,7 @@ QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dic
     graphWidget->setWindowTitle(QString("Volume %1").arg(++volCount));
     double* scalarRange = imageData->GetScalarRange();
     graphWidget->InitData(scalarRange[0], scalarRange[1]);
-    volContr->setData(property, graphWidget);
+    volContr->setData(property, graphWidget, imageData);
 
     //data bounds
     double dataBounds[6];
@@ -81,7 +83,7 @@ QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dic
 
 QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirName)
 {
-    vtkDICOMImageReader* dicomReader = vtkDICOMImageReader::New();
+    vtkSmartPointer<vtkDICOMImageReader> dicomReader = vtkSmartPointer<vtkDICOMImageReader>::New();
     dicomReader->SetDirectoryName(dirName.toStdString().c_str());
     dicomReader->Update();
 
@@ -144,13 +146,14 @@ QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile)
     QSharedPointer<VolumePropertiesController> volContr(new VolumePropertiesController());
     GraphWidget* graphWidget = new GraphWidget();
     graphWidget->setWindowTitle(QString("Volume %1").arg(++volCount));
-    double* scalarRange = metaImageReader->GetOutput()->GetScalarRange();
+    vtkImageData* image = metaImageReader->GetOutput();
+    double* scalarRange = image->GetScalarRange();
     graphWidget->InitData(scalarRange[0], scalarRange[1]);
-    volContr->setData(property, graphWidget);
+    volContr->setData(property, graphWidget, image);
 
     //data bounds
     double dataBounds[6];
-    metaImageReader->GetOutput()->GetBounds(dataBounds);
+    image->GetBounds(dataBounds);
 
     //mapper bounds
     double mapperBounds[6];

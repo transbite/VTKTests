@@ -2,11 +2,14 @@
 
 #include <QVTKWidget2.h>
 #include <QVTKWidget.h>
+#include <QVTKOpenGLWidget.h>
 #include <vtkSmartPointer.h>
 
 #include <QTimer>
 
-class VtkTestWindow : public QVTKWidget2
+#define VtkTestWindowSuperClass QVTKOpenGLWidget
+
+class VtkTestWindow : public VtkTestWindowSuperClass
 {
     Q_OBJECT
 

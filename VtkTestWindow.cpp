@@ -4,29 +4,38 @@
 #include <vtkGenericOpenGLRenderWindow.h>
 #include <vtkInteractorStyleTrackballCamera.h>
 //#include <vtkOpenGLExtensionManager.h>
+#include <vtkRendererCollection.h>
 
 #include <QDebug>
 
 vtkSmartPointer<vtkRenderer> ren1;
 
 VtkTestWindow::VtkTestWindow(QWidget* parent)
-    : QVTKWidget2(parent)
+    : VtkTestWindowSuperClass(parent)
 {
     m_renderer = vtkSmartPointer<vtkRenderer>::New();
-    ren1 = m_renderer;
-    ren1->SetBackground( 0.1, 0.2, 0.4 );
+//    ren1 = m_renderer;
+//    ren1->SetBackground( 0.1, 0.2, 0.4 );
 
     vtkRenderWindow* renWin = this->GetRenderWindow();
-	renWin->AddRenderer(ren1);
+    renWin->AddRenderer(m_renderer);
+    vtkRenderer* ren = renWin->GetRenderers()->GetFirstRenderer();
+    ren->SetBackground( 0.1, 0.2, 0.4 );
+    static bool ft = true;
+    if(ft)
+    {
+        ren1 = ren;
+        ft = false;
+    }
 
     vtkRenderWindowInteractor *iren = renWin->GetInteractor();//vtkRenderWindowInteractor::New();
     //iren->SetRenderWindow(renWin);
 
-    vtkSmartPointer<vtkInteractorStyleTrackballCamera> style_1 = vtkSmartPointer<vtkInteractorStyleTrackballCamera>::New();
-    vtkSmartPointer<vtkInteractorStyle> style_2 = vtkSmartPointer<vtkInteractorStyle>::New();
+//    vtkSmartPointer<vtkInteractorStyleTrackballCamera> style_1 = vtkSmartPointer<vtkInteractorStyleTrackballCamera>::New();
+//    vtkSmartPointer<vtkInteractorStyle> style_2 = vtkSmartPointer<vtkInteractorStyle>::New();
 
-    iren->SetInteractorStyle(style_1);
-	
+//    iren->SetInteractorStyle(style_1);
+
     this->setGeometry(this->pos().x(), this->pos().y(), 500, 500);
     ren1->ResetCamera();
 
@@ -45,7 +54,7 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     this->setAttribute(Qt::WA_DontCreateNativeAncestors);
 
     connect(&m_timer, &QTimer::timeout, this, &VtkTestWindow::onTimer);
-    startAnimation();
+    //startAnimation();
 }
 
 

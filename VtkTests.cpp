@@ -145,6 +145,7 @@ void VtkTests::executeCommand(const Commands &command, const QString &arguments)
             GraphWidget* graphWidget = volContr->graphWidget();
             QString windowTitle = graphWidget->windowTitle();
             m_volumeControllers.insert(windowTitle, volContr);
+            emit volumePropertiesControllerCreated(volContr.data());
             emit createDockWidget(graphWidget);
         }
         break;
@@ -154,6 +155,7 @@ void VtkTests::executeCommand(const Commands &command, const QString &arguments)
             GraphWidget* graphWidget = volContr->graphWidget();
             QString windowTitle = graphWidget->windowTitle();
             m_volumeControllers.insert(windowTitle, volContr);
+            emit volumePropertiesControllerCreated(volContr.data());
             emit createDockWidget(graphWidget);
         }
         break;

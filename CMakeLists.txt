@@ -35,8 +35,13 @@ set(SRCS main.cpp mainwindow.cpp mainwindow.h
 	VtkTestsVolume.cpp
 	GraphWidget.cpp GraphWidget.h
 	VolumePropertiesController.cpp VolumePropertiesController.h
+        VtkTestsImage2DWindow.cpp VtkTestsImage2DWindow.h
 	)
-set(FRMS mainwindow.ui GraphWidget.ui)
+set(FRMS
+    mainwindow.ui
+    GraphWidget.ui
+    VtkTestsImage2DWindow.ui
+    )
 
 qt5_wrap_ui(FRMS_HDRS ${FRMS})
 

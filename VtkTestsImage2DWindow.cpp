@@ -12,6 +12,7 @@ VtkTestsImage2DWindow::VtkTestsImage2DWindow(QWidget *parent)
     m_imageViewer = vtkSmartPointer<vtkImageViewer2>::New();
     m_imageViewer->SetRenderWindow(ui.vtkWidget->GetRenderWindow());
     m_imageViewer->SetupInteractor(ui.vtkWidget->GetRenderWindow()->GetInteractor());
+
 }
 
 VtkTestsImage2DWindow::~VtkTestsImage2DWindow()
@@ -19,7 +20,13 @@ VtkTestsImage2DWindow::~VtkTestsImage2DWindow()
 
 }
 
-void VtkTestsImage2DWindow::setInputData(vtkImageData *imageData)
+void VtkTestsImage2DWindow::setInputData(vtkImageData *imageData, int type)
 {
     m_imageViewer->SetInputData(imageData);
+    //axial
+    if (type == 0) m_imageViewer->SetSliceOrientationToXY();
+    //sagittal
+    if(type == 1) m_imageViewer->SetSliceOrientationToYZ();
+    //coronal
+    if (type == 2) m_imageViewer->SetSliceOrientationToXZ();
 }

@@ -89,11 +89,6 @@ void addCone()
     boxWidget->On();
 }
 
-QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
-QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirName);
-QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile);
-
-//VTK User's Guide Ch 6.2
 #include <vtkQuadric.h>
 #include <vtkSampleFunction.h>
 #include <vtkExtractVOI.h>
@@ -119,15 +114,20 @@ void testVtkExtractVOI()
     contMapper->SetScalarRange(0.0, 1.2);
     vtkSmartPointer<vtkActor> contActor = vtkSmartPointer<vtkActor>::New();
     contActor->SetMapper(contMapper);
-
     ren1->AddActor(contActor);
 }
+
+QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
+QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirName);
+QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile);
+
+
 
 VtkTests::VtkTests(QObject* parent)
     : QObject(parent)
 {
     //addCone();
-    testVtkExtractVOI();
+   // testVtkExtractVOI();
 }
 
 VtkTests::~VtkTests()

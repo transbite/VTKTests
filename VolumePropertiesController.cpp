@@ -17,6 +17,8 @@ VolumePropertiesController::VolumePropertiesController(QObject *parent)
     , m_volumeProperty(nullptr)
     , m_graphWidget(nullptr)
     , m_imageData(nullptr)
+    , m_volumeData(nullptr)
+
 {
 
 }
@@ -24,6 +26,24 @@ VolumePropertiesController::VolumePropertiesController(QObject *parent)
 VolumePropertiesController::~VolumePropertiesController()
 {
 
+}
+
+void VolumePropertiesController::setData(vtkVolumeProperty *volumeProperty, GraphWidget *graphWidget, vtkImageData *imageData, vtkVolume* volumeData, QString dicomDir)
+{
+    m_volumeProperty = volumeProperty;
+    m_graphWidget = graphWidget;
+
+    bool b = connect((GraphWidget*)graphWidget, &GraphWidget::signalColorChanged,
+                     this, &VolumePropertiesController::onGraphColorChanged);
+    Q_ASSERT(b);
+    onGraphColorChanged(0);
+    onGraphColorChanged(1);
+    onGraphColorChanged(2);
+    m_graphWidget->Points(3);
+
+    m_imageData = imageData;
+    m_volumeData = volumeData;
+    m_dicomDir = dicomDir;
 }
 
 void VolumePropertiesController::setData(vtkVolumeProperty *volumeProperty, GraphWidget *graphWidget, vtkImageData *imageData)
@@ -40,8 +60,8 @@ void VolumePropertiesController::setData(vtkVolumeProperty *volumeProperty, Grap
     m_graphWidget->Points(3);
 
     m_imageData = imageData;
-}
 
+}
 GraphWidget* VolumePropertiesController::graphWidget()
 {
     return m_graphWidget;
@@ -50,6 +70,16 @@ GraphWidget* VolumePropertiesController::graphWidget()
 vtkImageData* VolumePropertiesController::imageData()
 {
     return m_imageData;
+}
+
+vtkVolume* VolumePropertiesController::volumeData()
+{
+    return m_volumeData;
+}
+QString VolumePropertiesController::dicomDir()
+{
+
+    return m_dicomDir;
 }
 
 void VolumePropertiesController::onGraphColorChanged(int channel)

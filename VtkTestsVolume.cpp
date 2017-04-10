@@ -22,7 +22,7 @@
 extern vtkSmartPointer<vtkRenderer> ren1;
 static int volCount = 0;
 
-QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData)
+QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData, QString dicomDir)
 {
 //    vtkSmartPointer<vtkSmartVolumeMapper> volumeMapper = vtkSmartPointer<vtkSmartVolumeMapper>::New();
 //    vtkSmartPointer<vtkGPUVolumeRayCastMapper> volumeMapper = vtkSmartPointer<vtkGPUVolumeRayCastMapper>::New();
@@ -60,7 +60,6 @@ QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dic
     graphWidget->setWindowTitle(QString("Volume %1").arg(++volCount));
     double* scalarRange = imageData->GetScalarRange();
     graphWidget->InitData(scalarRange[0], scalarRange[1]);
-    volContr->setData(property, graphWidget, imageData);
 
     //data bounds
     double dataBounds[6];
@@ -73,6 +72,8 @@ QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dic
     //volume bounds
     double bounds[6];
     volume->GetBounds(bounds);
+
+    volContr->setData(property, graphWidget, imageData,volume, dicomDir);
 
     ren1->AddVolume(volume);
     ren1->ResetCamera();
@@ -88,6 +89,7 @@ QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirN
     dicomReader->Update();
 
     vtkImageData* dicomData = dicomReader->GetOutput();
+
 
     //bounds
     double bounds[6];
@@ -114,7 +116,7 @@ QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirN
     dicomInformation->PrintHeader(std::cout, indent);
     dicomInformation->PrintKeys(std::cout, indent);
 
-    return addDicomData(dicomReader, dicomData);
+    return addDicomData(dicomReader, dicomData,dirName);
 }
 
 QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile)

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FourWindowsTest</class>
+ <widget class="QWidget" name="FourWindowsTest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>671</width>
+    <height>514</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="VtkTestsImage2DWindow" name="vtkSagittal" native="true">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>39</y>
+     <width>251</width>
+     <height>221</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="VtkTestsImage2DWindow" name="vtkCoronal" native="true">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>40</y>
+     <width>271</width>
+     <height>221</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="VtkTestsImage2DWindow" name="vtkAxial" native="true">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>251</width>
+     <height>211</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="VtkTestWindow" name="volumWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>271</width>
+     <height>211</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VtkTestWindow</class>
+   <extends>QWidget</extends>
+   <header>VtkTestWindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VtkTestsImage2DWindow</class>
+   <extends>QWidget</extends>
+   <header>VtkTestsImage2DWindow.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

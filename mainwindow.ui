@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1146</width>
     <height>800</height>
    </rect>
   </property>
@@ -20,28 +20,50 @@
    <string>VTK Tests</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="1">
-     <widget class="VtkTestWindow" name="widget" native="true"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="VtkTestsImage2DWindow" name="vtkAxial" native="true"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="VtkTestsImage2DWindow" name="vtkSagittal" native="true"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="VtkTestsImage2DWindow" name="vtkCoronal" native="true"/>
-    </item>
-   </layout>
+   <widget class="VtkTestWindow" name="widget" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>90</y>
+      <width>231</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>70</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vizualization</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
-     <height>22</height>
+     <width>1146</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -91,12 +113,6 @@
    <class>VtkTestWindow</class>
    <extends>QWidget</extends>
    <header>VtkTestWindow.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>VtkTestsImage2DWindow</class>
-   <extends>QWidget</extends>
-   <header>VtkTestsImage2DWindow.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

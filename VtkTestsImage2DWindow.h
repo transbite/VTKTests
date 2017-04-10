@@ -16,7 +16,7 @@ public:
     VtkTestsImage2DWindow(QWidget* parent = nullptr);
     ~VtkTestsImage2DWindow();
 
-    void setInputData(vtkImageData* imageData);
+    void setInputData(vtkImageData* imageData, int type);
 
 private:
     Ui::VtkTestsImage2DWindow   ui;

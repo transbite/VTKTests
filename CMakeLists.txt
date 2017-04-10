@@ -29,18 +29,23 @@ if(UNIX)
 ##endif()
 endif()
 
-set(SRCS main.cpp mainwindow.cpp mainwindow.h 
-	VtkTestWindow.cpp VtkTestWindow.h
+set(SRCS main.cpp mainwindow.cpp mainwindow.h
+       	VtkTestWindow.cpp VtkTestWindow.h
 	VtkTests.cpp VtkTests.h
 	VtkTestsVolume.cpp
 	GraphWidget.cpp GraphWidget.h
 	VolumePropertiesController.cpp VolumePropertiesController.h
         VtkTestsImage2DWindow.cpp VtkTestsImage2DWindow.h
+        fourwindowstest.cpp fourwindowstest.h
+        imageactortest.cpp imageactortest.h
+        imageslicertest.cpp imageslicertest.h
 	)
 set(FRMS
     mainwindow.ui
     GraphWidget.ui
     VtkTestsImage2DWindow.ui
+    fourwindowstest.ui
+
     )
 
 qt5_wrap_ui(FRMS_HDRS ${FRMS})

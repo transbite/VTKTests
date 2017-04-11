@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>671</width>
-    <height>514</height>
+    <height>538</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,40 +16,40 @@
   <widget class="VtkTestsImage2DWindow" name="vtkSagittal" native="true">
    <property name="geometry">
     <rect>
-     <x>29</x>
-     <y>39</y>
-     <width>251</width>
-     <height>221</height>
+     <x>9</x>
+     <y>9</y>
+     <width>321</width>
+     <height>251</height>
     </rect>
    </property>
   </widget>
   <widget class="VtkTestsImage2DWindow" name="vtkCoronal" native="true">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>40</y>
-     <width>271</width>
-     <height>221</height>
+     <x>340</x>
+     <y>10</y>
+     <width>321</width>
+     <height>251</height>
     </rect>
    </property>
   </widget>
   <widget class="VtkTestsImage2DWindow" name="vtkAxial" native="true">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>280</y>
-     <width>251</width>
-     <height>211</height>
+     <width>321</width>
+     <height>251</height>
     </rect>
    </property>
   </widget>
   <widget class="VtkTestWindow" name="volumWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>340</x>
      <y>280</y>
-     <width>271</width>
-     <height>211</height>
+     <width>321</width>
+     <height>251</height>
     </rect>
    </property>
   </widget>

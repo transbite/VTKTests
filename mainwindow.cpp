@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_2DWindows[SAGITTAL] = ui->vtkSagittal;
     m_2DWindows[CORONAL] = ui->vtkCoronal;*/
     m_vtkTests.reset(new VtkTests());
+    ui->comboBox->addItem("Choose an option");
     ui->comboBox->addItem("Four windows");
     ui->comboBox->addItem("One window - Image Actor");
     ui->comboBox->addItem("One window - Image Slice");
@@ -136,6 +137,11 @@ void MainWindow::on_ComboBoxChanged()
 }
 void MainWindow::displayFourWindows(VolumePropertiesController *controller){
 
+    if(this->centralWidget()&& this->centralWidget()!= m_fourWindows){
+        this->centralWidget()->deleteLater();
+    }
+
+        this->setCentralWidget(m_fourWindows);
     for(int i = 0; i < COUNT; ++i)
      {
         m_fourWindows->m_2DWindows[i]->setInputData(controller->imageData(), i);
@@ -147,13 +153,8 @@ void MainWindow::displayFourWindows(VolumePropertiesController *controller){
     vtkVolume* volume = controller->volumeData();
     rendererVOL->AddVolume(volume);
     rendererVOL->ResetCamera();
-
     renWin->AddRenderer(rendererVOL);
-    if(this->centralWidget()&& this->centralWidget()!=m_fourWindows){
-        this->centralWidget()->deleteLater();
-    }
 
-        this->setCentralWidget(m_fourWindows);
 }
 void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
     static double viewport[3][4] = {
@@ -162,12 +163,17 @@ void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
           { 0.0, 0.0, 0.5, 0.5 },
 
         };
-    //vtkRenderWindow *renWin = ui->myWidget->GetRenderWindow();
+
     vtkRenderWindow *renWin = m_imageActor->GetRenderWindow();
+    if(this->centralWidget()&& this->centralWidget() != m_imageActor){
+        this->centralWidget()->deleteLater();
+    }
+
+    this->setCentralWidget(m_imageActor);
     double range[2];
     for(int i = 0; i < COUNT; ++i)
      {
-        //myWidget1
+        //image Actor
         vtkImageData* imageData = controller->imageData();
         imageData->GetScalarRange(range);
         vtkSmartPointer<vtkImageActor> imageActor = vtkSmartPointer<vtkImageActor>::New();
@@ -217,8 +223,9 @@ void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
         }*/
 
         if( i == 0 )
-            //axial??
+
         {
+            //axial
             camera->SetViewUp(0.0, 0.0, +1.0);
         }
         else if ( i == 1)
@@ -242,11 +249,7 @@ void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
     rendererVOL->ResetCamera();
     renWin->AddRenderer(rendererVOL);
 
-    if(this->centralWidget()&& this->centralWidget() != m_imageActor){
-        this->centralWidget()->deleteLater();
-    }
 
-    this->setCentralWidget(m_imageActor);
     vtkSmartPointer<vtkRenderWindowInteractor> iren = vtkSmartPointer<vtkRenderWindowInteractor>::New();
     vtkSmartPointer<vtkInteractorStyleImage> style = vtkSmartPointer<vtkInteractorStyleImage>::New();
     style->SetInteractionModeToImage3D();
@@ -265,8 +268,13 @@ void MainWindow::displayOneWindow2(VolumePropertiesController *controller){
 
         };
 
-    //vtkRenderWindow* renWin2 = ui->myWidget2->GetRenderWindow();
+
     vtkRenderWindow* renWin2 = m_imageSclicer->GetRenderWindow();
+
+    if(this->centralWidget()&& this->centralWidget() != m_imageSclicer){
+        this->centralWidget()->deleteLater();
+    }
+    this->setCentralWidget(m_imageSclicer);
 
     std::string filesDir = controller->dicomDir().toStdString();
     vtkSmartPointer<vtkDICOMImageReader> reader = vtkSmartPointer<vtkDICOMImageReader>::New();
@@ -319,14 +327,14 @@ void MainWindow::displayOneWindow2(VolumePropertiesController *controller){
       point[0] = 0.5*(bounds[0] + bounds[1]);
       point[1] = 0.5*(bounds[2] + bounds[3]);
       point[2] = 0.5*(bounds[4] + bounds[5]);
-      qDebug() << "volume bounds 2 " << bounds[0] << bounds[1] << bounds[3] << bounds[4] << bounds[5];
+
       double maxdim = 0.0;
       for (int j = 0; j < 3; j++)
       {
         double s = 0.5*(bounds[2*j+1] - bounds[2*j]);
         maxdim = (s > maxdim ? s : maxdim);
       }
-      qDebug() << "volume bounds 2 " << maxdim;
+
       vtkCamera *camera = renderer2->GetActiveCamera();
       camera->SetFocalPoint(point);
       point[i % 3] -= 500.0;
@@ -350,9 +358,6 @@ void MainWindow::displayOneWindow2(VolumePropertiesController *controller){
     rendererVOL2->ResetCamera();
     renWin2->AddRenderer(rendererVOL2);
 
-    if(this->centralWidget()&& this->centralWidget() != m_imageSclicer){
-        this->centralWidget()->deleteLater();
-    }
-    this->setCentralWidget(m_imageSclicer);
+
 
 }

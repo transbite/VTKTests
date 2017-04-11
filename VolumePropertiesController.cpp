@@ -10,7 +10,7 @@
 
 #include <vector>
 
-extern vtkSmartPointer<vtkRenderer> ren1;
+//extern vtkSmartPointer<vtkRenderer> ren1;
 
 VolumePropertiesController::VolumePropertiesController(QObject *parent)
     : QObject(parent)

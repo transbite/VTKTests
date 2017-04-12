@@ -22,6 +22,7 @@ public:
     explicit FourWindowsTest(QWidget *parent = 0);
     ~FourWindowsTest();
     VtkTestsImage2DWindow*     m_2DWindows[COUNT];
+    //QVTKOpenGLWidget* m_volume;
     VtkTestWindow* m_volume;
 
 private:

@@ -56,15 +56,15 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>VtkTestWindow</class>
-   <extends>QWidget</extends>
-   <header>VtkTestWindow.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>VtkTestsImage2DWindow</class>
    <extends>QWidget</extends>
    <header>VtkTestsImage2DWindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VtkTestWindow</class>
+   <extends>QWidget</extends>
+   <header>vtktestwindow.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

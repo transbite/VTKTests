@@ -52,8 +52,10 @@ MainWindow::MainWindow(QWidget *parent) :
     Q_ASSERT(b);
     b = connect(m_vtkTests.data(), &VtkTests::removeDockWidget, this, &MainWindow::on_removeDockWidget);
     Q_ASSERT(b);
-    connect(m_vtkTests.data(), &VtkTests::volumePropertiesControllerCreated, this, &MainWindow::on_VolumePropertiesControllerCreated);
-    connect(ui->comboBox, &QComboBox::currentTextChanged, this, &MainWindow::on_ComboBoxChanged);
+    b = connect(m_vtkTests.data(), &VtkTests::volumePropertiesControllerCreated, this, &MainWindow::on_VolumePropertiesControllerCreated);
+    Q_ASSERT(b);
+    b = connect(ui->comboBox, &QComboBox::currentTextChanged, this, &MainWindow::on_ComboBoxChanged);
+    Q_ASSERT(b);
 }
 
 MainWindow::~MainWindow()
@@ -137,11 +139,12 @@ void MainWindow::on_ComboBoxChanged()
 }
 void MainWindow::displayFourWindows(VolumePropertiesController *controller){
 
+    m_fourWindows = new FourWindowsTest();
     if(this->centralWidget()&& this->centralWidget()!= m_fourWindows){
         this->centralWidget()->deleteLater();
     }
 
-        this->setCentralWidget(m_fourWindows);
+    this->setCentralWidget(m_fourWindows);
     for(int i = 0; i < COUNT; ++i)
      {
         m_fourWindows->m_2DWindows[i]->setInputData(controller->imageData(), i);
@@ -163,7 +166,7 @@ void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
           { 0.0, 0.0, 0.5, 0.5 },
 
         };
-
+    m_imageActor = new ImageActorTest();
     vtkRenderWindow *renWin = m_imageActor->GetRenderWindow();
     if(this->centralWidget()&& this->centralWidget() != m_imageActor){
         this->centralWidget()->deleteLater();
@@ -268,10 +271,10 @@ void MainWindow::displayOneWindow2(VolumePropertiesController *controller){
 
         };
 
-
+    m_imageSclicer = new ImageSlicerTest();
     vtkRenderWindow* renWin2 = m_imageSclicer->GetRenderWindow();
 
-    if(this->centralWidget()&& this->centralWidget() != m_imageSclicer){
+   if(this->centralWidget()&& this->centralWidget() != m_imageSclicer){
         this->centralWidget()->deleteLater();
     }
     this->setCentralWidget(m_imageSclicer);

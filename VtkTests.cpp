@@ -21,7 +21,7 @@
 #include <QMessageBox>
 #include <QDebug>
 
-/*class vtkMyCallback : public vtkCommand
+class vtkMyCallback : public vtkCommand
 {
 public:
     static vtkMyCallback *New()
@@ -116,7 +116,7 @@ void testVtkExtractVOI()
     contActor->SetMapper(contMapper);
     ren1->AddActor(contActor);
 }
-*/
+
 QSharedPointer<VolumePropertiesController> addDicomData(vtkDICOMImageReader* dicomReader, vtkImageData* imageData);
 QSharedPointer<VolumePropertiesController> addDicomDirectory(const QString &dirName);
 QSharedPointer<VolumePropertiesController> addImage(const QString &imageFile);
@@ -127,7 +127,7 @@ VtkTests::VtkTests(QObject* parent)
     : QObject(parent)
 {
     //addCone();
-   // testVtkExtractVOI();
+   //testVtkExtractVOI();
 }
 
 VtkTests::~VtkTests()

@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_fourWindows = new FourWindowsTest(parent);
     m_imageActor = new ImageActorTest();
     m_imageSclicer = new ImageSlicerTest();
+    m_controller = new VolumePropertiesController();
     /*m_2DWindows[AXIAL] = ui->vtkAxial;
     m_2DWindows[SAGITTAL] = ui->vtkSagittal;
     m_2DWindows[CORONAL] = ui->vtkCoronal;*/
@@ -120,8 +121,9 @@ void MainWindow::on_VolumePropertiesControllerCreated(VolumePropertiesController
 void MainWindow::on_ComboBoxChanged()
 {
 
-    QString method = ui->comboBox->currentText();
-
+   QString method = ui->comboBox->currentText();
+  if(m_controller!= NULL)
+  {
     if(method == "Four windows")
     {
         displayFourWindows(m_controller);
@@ -136,129 +138,134 @@ void MainWindow::on_ComboBoxChanged()
     {
         displayOneWindow2(m_controller);
     }
+  }
 }
 void MainWindow::displayFourWindows(VolumePropertiesController *controller){
 
-    m_fourWindows = new FourWindowsTest();
-    if(this->centralWidget()&& this->centralWidget()!= m_fourWindows){
-        this->centralWidget()->deleteLater();
-    }
+  if(controller->imageData() != NULL)
+  {
+        m_fourWindows = new FourWindowsTest();
+        if(this->centralWidget()&& this->centralWidget()!= m_fourWindows){
+            this->centralWidget()->deleteLater();
+        }
 
-    this->setCentralWidget(m_fourWindows);
-    for(int i = 0; i < COUNT; ++i)
-     {
-        m_fourWindows->m_2DWindows[i]->setInputData(controller->imageData(), i);
-     }
+        this->setCentralWidget(m_fourWindows);
+        for(int i = 0; i < COUNT; ++i)
+         {
+            m_fourWindows->m_2DWindows[i]->setInputData(controller->imageData(), i);
+         }
 
-    vtkRenderWindow* renWin = m_fourWindows->m_volume->GetRenderWindow();
-    vtkSmartPointer<vtkRenderer> rendererVOL = vtkSmartPointer<vtkRenderer>::New();
+        vtkRenderWindow* renWin = m_fourWindows->m_volume->GetRenderWindow();
+        vtkSmartPointer<vtkRenderer> rendererVOL = vtkSmartPointer<vtkRenderer>::New();
 
-    vtkVolume* volume = controller->volumeData();
-    rendererVOL->AddVolume(volume);
-    rendererVOL->ResetCamera();
-    renWin->AddRenderer(rendererVOL);
-
+        vtkVolume* volume = controller->volumeData();
+        rendererVOL->AddVolume(volume);
+        rendererVOL->ResetCamera();
+        renWin->AddRenderer(rendererVOL);
+ }
 }
 void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
-    static double viewport[3][4] = {
+   static double viewport[3][4] = {
           { 0.0, 0.5, 0.5, 1 },
           { 0.5, 0.5, 1.0, 1.0 },
           { 0.0, 0.0, 0.5, 0.5 },
 
         };
-    m_imageActor = new ImageActorTest();
-    vtkRenderWindow *renWin = m_imageActor->GetRenderWindow();
-    if(this->centralWidget()&& this->centralWidget() != m_imageActor){
-        this->centralWidget()->deleteLater();
-    }
-
-    this->setCentralWidget(m_imageActor);
-    double range[2];
-    for(int i = 0; i < COUNT; ++i)
-     {
-        //image Actor
-        vtkImageData* imageData = controller->imageData();
-        imageData->GetScalarRange(range);
-        vtkSmartPointer<vtkImageActor> imageActor = vtkSmartPointer<vtkImageActor>::New();
-
-        imageActor->GetMapper()->SliceFacesCameraOn();
-        imageActor->GetMapper()->SliceAtFocalPointOn();
-
-        imageActor->GetMapper()->SetInputData(imageData);
-        //
-       /* vtkSmartPointer<vtkImageSlice> image = vtkSmartPointer<vtkImageSlice>::New();
-        image->SetMapper(imageActor->GetMapper());
-        image->GetProperty()->SetColorWindow(range[1] - range[0]);
-        image->GetProperty()->SetColorLevel(0.5*(range[0] + range[1]));
-        image->GetProperty()->SetInterpolationTypeToNearest();*/
-        //
-
-        vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
-        renderer->SetViewport(viewport[i]);
-        //renderer->AddViewProp(image);
-        renderer->AddActor(imageActor);
-        renWin->AddRenderer(renderer);
-        vtkVolume* volumeTest = controller->volumeData();
-        double *bounds = volumeTest->GetBounds();
-
-        double point[3];
-        point[0] = 0.5*(bounds[0] + bounds[1]);
-        point[1] = 0.5*(bounds[2] + bounds[3]);
-        point[2] = 0.5*(bounds[4] + bounds[5]);
-        double maxdim = 0.0;
-        for (int j = 0; j < 3; j++)
-        {
-          double s = 0.5*(bounds[2*j+1] - bounds[2*j]);
-          maxdim = (s > maxdim ? s : maxdim);
+   if(controller->imageData() != NULL)
+   {
+        m_imageActor = new ImageActorTest();
+        vtkRenderWindow *renWin = m_imageActor->GetRenderWindow();
+        if(this->centralWidget()&& this->centralWidget() != m_imageActor){
+            this->centralWidget()->deleteLater();
         }
-        qDebug() << "volume bounds  " << maxdim;
-        vtkCamera *camera = renderer->GetActiveCamera();
-        camera->SetFocalPoint(point);
-        point[i % 3] -= 500.0;
-        camera->SetPosition(point);
-        /*if ((i % 3) == 2)
-        {
-          camera->SetViewUp(0.0, -1.0, 0.0);
+
+        this->setCentralWidget(m_imageActor);
+        double range[2];
+        for(int i = 0; i < COUNT; ++i)
+         {
+            //image Actor
+            vtkImageData* imageData = controller->imageData();
+            imageData->GetScalarRange(range);
+            vtkSmartPointer<vtkImageActor> imageActor = vtkSmartPointer<vtkImageActor>::New();
+
+            imageActor->GetMapper()->SliceFacesCameraOn();
+            imageActor->GetMapper()->SliceAtFocalPointOn();
+
+            imageActor->GetMapper()->SetInputData(imageData);
+            //
+           /* vtkSmartPointer<vtkImageSlice> image = vtkSmartPointer<vtkImageSlice>::New();
+            image->SetMapper(imageActor->GetMapper());
+            image->GetProperty()->SetColorWindow(range[1] - range[0]);
+            image->GetProperty()->SetColorLevel(0.5*(range[0] + range[1]));
+            image->GetProperty()->SetInterpolationTypeToNearest();*/
+            //
+
+            vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
+            renderer->SetViewport(viewport[i]);
+            //renderer->AddViewProp(image);
+            renderer->AddActor(imageActor);
+            renWin->AddRenderer(renderer);
+            vtkVolume* volumeTest = controller->volumeData();
+            double *bounds = volumeTest->GetBounds();
+
+            double point[3];
+            point[0] = 0.5*(bounds[0] + bounds[1]);
+            point[1] = 0.5*(bounds[2] + bounds[3]);
+            point[2] = 0.5*(bounds[4] + bounds[5]);
+            double maxdim = 0.0;
+            for (int j = 0; j < 3; j++)
+            {
+              double s = 0.5*(bounds[2*j+1] - bounds[2*j]);
+              maxdim = (s > maxdim ? s : maxdim);
+            }
+            qDebug() << "volume bounds  " << maxdim;
+            vtkCamera *camera = renderer->GetActiveCamera();
+            camera->SetFocalPoint(point);
+            point[i % 3] -= 500.0;
+            camera->SetPosition(point);
+            /*if ((i % 3) == 2)
+            {
+              camera->SetViewUp(0.0, -1.0, 0.0);
+            }
+            else
+            {
+              camera->SetViewUp(0.0, 0.0, +1.0);
+            }*/
+
+            if( i == 0 )
+
+            {
+                //axial
+                camera->SetViewUp(0.0, 0.0, +1.0);
+            }
+            else if ( i == 1)
+            {
+               //sagittal slice
+                camera->SetViewUp(0.0, 0.0, +1.0);
+            }
+            else if ( i == 2)
+            {
+               //coronal slice
+               camera->SetViewUp(0.0, -1.0, 0.0);
+            }
+            camera->ParallelProjectionOn();
+            camera->SetParallelScale(maxdim);
         }
-        else
-        {
-          camera->SetViewUp(0.0, 0.0, +1.0);
-        }*/
 
-        if( i == 0 )
-
-        {
-            //axial
-            camera->SetViewUp(0.0, 0.0, +1.0);
-        }
-        else if ( i == 1)
-        {
-           //sagittal slice
-            camera->SetViewUp(0.0, 0.0, +1.0);
-        }
-        else if ( i == 2)
-        {
-           //coronal slice
-           camera->SetViewUp(0.0, -1.0, 0.0);
-        }
-        camera->ParallelProjectionOn();
-        camera->SetParallelScale(maxdim);
-    }
-
-    vtkSmartPointer<vtkRenderer> rendererVOL = vtkSmartPointer<vtkRenderer>::New();
-    rendererVOL->SetViewport(0.5, 0.0, 1.0, 0.5);
-    vtkVolume* volume = controller->volumeData();
-    rendererVOL->AddVolume(volume);
-    rendererVOL->ResetCamera();
-    renWin->AddRenderer(rendererVOL);
+        vtkSmartPointer<vtkRenderer> rendererVOL = vtkSmartPointer<vtkRenderer>::New();
+        rendererVOL->SetViewport(0.5, 0.0, 1.0, 0.5);
+        vtkVolume* volume = controller->volumeData();
+        rendererVOL->AddVolume(volume);
+        rendererVOL->ResetCamera();
+        renWin->AddRenderer(rendererVOL);
 
 
-    vtkSmartPointer<vtkRenderWindowInteractor> iren = vtkSmartPointer<vtkRenderWindowInteractor>::New();
-    vtkSmartPointer<vtkInteractorStyleImage> style = vtkSmartPointer<vtkInteractorStyleImage>::New();
-    style->SetInteractionModeToImage3D();
-   // iren->SetRenderWindow(renWin);
-  //  iren->SetInteractorStyle(style);
-
+        vtkSmartPointer<vtkRenderWindowInteractor> iren = vtkSmartPointer<vtkRenderWindowInteractor>::New();
+        vtkSmartPointer<vtkInteractorStyleImage> style = vtkSmartPointer<vtkInteractorStyleImage>::New();
+        style->SetInteractionModeToImage3D();
+       // iren->SetRenderWindow(renWin);
+      //  iren->SetInteractorStyle(style);
+   }
 
 }
 
@@ -270,97 +277,98 @@ void MainWindow::displayOneWindow2(VolumePropertiesController *controller){
           { 0.0, 0.0, 0.5, 0.5 },
 
         };
-
-    m_imageSclicer = new ImageSlicerTest();
-    vtkRenderWindow* renWin2 = m_imageSclicer->GetRenderWindow();
-
-   if(this->centralWidget()&& this->centralWidget() != m_imageSclicer){
-        this->centralWidget()->deleteLater();
-    }
-    this->setCentralWidget(m_imageSclicer);
-
-    std::string filesDir = controller->dicomDir().toStdString();
-    vtkSmartPointer<vtkDICOMImageReader> reader = vtkSmartPointer<vtkDICOMImageReader>::New();
-    reader->SetDirectoryName(filesDir.c_str());
-    reader->Update();
-    qDebug() << "Testing"  << reader->GetPatientName() << reader->GetStudyID();
-    vtkAlgorithmOutput* portToDisplay = reader->GetOutputPort();
-    double range[2];
-    int extent[6];
-    reader->Update();
-
-    reader->GetOutput()->GetScalarRange(range);
-    reader->GetOutput()->GetExtent(extent);
-
-    // check if image is 2D
-    bool imageIs3D = (extent[5] > extent[4]);
-
-    for (int i = 2*(imageIs3D == 0); i < 3; i++)
+    if(controller->imageData() != NULL)
     {
-      vtkSmartPointer<vtkImageResliceMapper> imageMapper =
-        vtkSmartPointer<vtkImageResliceMapper>::New();
-      if (i < 3)
-      {
-        imageMapper->SetInputConnection(portToDisplay);
-      }
-      imageMapper->SliceFacesCameraOn();
-      imageMapper->SliceAtFocalPointOn();
-      imageMapper->ResampleToScreenPixelsOn();
+        m_imageSclicer = new ImageSlicerTest();
+        vtkRenderWindow* renWin2 = m_imageSclicer->GetRenderWindow();
 
-      vtkSmartPointer<vtkImageSlice> image =
-        vtkSmartPointer<vtkImageSlice>::New();
-      image->SetMapper(imageMapper);
-      image->GetProperty()->SetColorWindow(range[1] - range[0]);
-      image->GetProperty()->SetColorLevel(0.5*(range[0] + range[1]));
-      image->GetProperty()->SetInterpolationTypeToNearest();
+       if(this->centralWidget()&& this->centralWidget() != m_imageSclicer){
+            this->centralWidget()->deleteLater();
+        }
+        this->setCentralWidget(m_imageSclicer);
 
-      vtkSmartPointer<vtkRenderer> renderer2 = vtkSmartPointer<vtkRenderer>::New();
-      renderer2->AddViewProp(image);
-      renderer2->SetBackground(0.0, 0.0, 0.0);
-      if (imageIs3D)
-      {
-        renderer2->SetViewport(viewport[i]);
-      }
+        std::string filesDir = controller->dicomDir().toStdString();
+        vtkSmartPointer<vtkDICOMImageReader> reader = vtkSmartPointer<vtkDICOMImageReader>::New();
+        reader->SetDirectoryName(filesDir.c_str());
+        reader->Update();
+        qDebug() << "Testing"  << reader->GetPatientName() << reader->GetStudyID();
+        vtkAlgorithmOutput* portToDisplay = reader->GetOutputPort();
+        double range[2];
+        int extent[6];
+        reader->Update();
 
-      renWin2->AddRenderer(renderer2);
+        reader->GetOutput()->GetScalarRange(range);
+        reader->GetOutput()->GetExtent(extent);
 
-      // use center point to set camera
-      double *bounds = imageMapper->GetBounds();
-      double point[3];
-      point[0] = 0.5*(bounds[0] + bounds[1]);
-      point[1] = 0.5*(bounds[2] + bounds[3]);
-      point[2] = 0.5*(bounds[4] + bounds[5]);
+        // check if image is 2D
+        bool imageIs3D = (extent[5] > extent[4]);
 
-      double maxdim = 0.0;
-      for (int j = 0; j < 3; j++)
-      {
-        double s = 0.5*(bounds[2*j+1] - bounds[2*j]);
-        maxdim = (s > maxdim ? s : maxdim);
-      }
+        for (int i = 2*(imageIs3D == 0); i < 3; i++)
+        {
+          vtkSmartPointer<vtkImageResliceMapper> imageMapper =
+            vtkSmartPointer<vtkImageResliceMapper>::New();
+          if (i < 3)
+          {
+            imageMapper->SetInputConnection(portToDisplay);
+          }
+          imageMapper->SliceFacesCameraOn();
+          imageMapper->SliceAtFocalPointOn();
+          imageMapper->ResampleToScreenPixelsOn();
 
-      vtkCamera *camera = renderer2->GetActiveCamera();
-      camera->SetFocalPoint(point);
-      point[i % 3] -= 500.0;
-      camera->SetPosition(point);
-      if ((i % 3) == 2)
-      {
-        camera->SetViewUp(0.0, -1.0, 0.0);
-      }
-      else
-      {
-        camera->SetViewUp(0.0, 0.0, +1.0);
-      }
-      camera->ParallelProjectionOn();
-      camera->SetParallelScale(maxdim);
+          vtkSmartPointer<vtkImageSlice> image =
+            vtkSmartPointer<vtkImageSlice>::New();
+          image->SetMapper(imageMapper);
+          image->GetProperty()->SetColorWindow(range[1] - range[0]);
+          image->GetProperty()->SetColorLevel(0.5*(range[0] + range[1]));
+          image->GetProperty()->SetInterpolationTypeToNearest();
+
+          vtkSmartPointer<vtkRenderer> renderer2 = vtkSmartPointer<vtkRenderer>::New();
+          renderer2->AddViewProp(image);
+          renderer2->SetBackground(0.0, 0.0, 0.0);
+          if (imageIs3D)
+          {
+            renderer2->SetViewport(viewport[i]);
+          }
+
+          renWin2->AddRenderer(renderer2);
+
+          // use center point to set camera
+          double *bounds = imageMapper->GetBounds();
+          double point[3];
+          point[0] = 0.5*(bounds[0] + bounds[1]);
+          point[1] = 0.5*(bounds[2] + bounds[3]);
+          point[2] = 0.5*(bounds[4] + bounds[5]);
+
+          double maxdim = 0.0;
+          for (int j = 0; j < 3; j++)
+          {
+            double s = 0.5*(bounds[2*j+1] - bounds[2*j]);
+            maxdim = (s > maxdim ? s : maxdim);
+          }
+
+          vtkCamera *camera = renderer2->GetActiveCamera();
+          camera->SetFocalPoint(point);
+          point[i % 3] -= 500.0;
+          camera->SetPosition(point);
+          if ((i % 3) == 2)
+          {
+            camera->SetViewUp(0.0, -1.0, 0.0);
+          }
+          else
+          {
+            camera->SetViewUp(0.0, 0.0, +1.0);
+          }
+          camera->ParallelProjectionOn();
+          camera->SetParallelScale(maxdim);
+        }
+
+        vtkSmartPointer<vtkRenderer> rendererVOL2 = vtkSmartPointer<vtkRenderer>::New();
+        rendererVOL2->SetViewport(0.5, 0.0, 1.0, 0.5);
+        vtkVolume* volume2 = controller->volumeData();
+        rendererVOL2->AddVolume(volume2);
+        rendererVOL2->ResetCamera();
+        renWin2->AddRenderer(rendererVOL2);
     }
-
-    vtkSmartPointer<vtkRenderer> rendererVOL2 = vtkSmartPointer<vtkRenderer>::New();
-    rendererVOL2->SetViewport(0.5, 0.0, 1.0, 0.5);
-    vtkVolume* volume2 = controller->volumeData();
-    rendererVOL2->AddVolume(volume2);
-    rendererVOL2->ResetCamera();
-    renWin2->AddRenderer(rendererVOL2);
-
 
 
 }

@@ -20,7 +20,7 @@
 #include <vtkImageData.h>
 #include <vtkConeSource.h>
 #include <vtkPolyDataMapper.h>
-#include<vtkInteractorStyleImage.h>
+#include <vtkInteractorStyleImage.h>
 #include <QDebug>
 
 
@@ -121,7 +121,7 @@ void MainWindow::on_VolumePropertiesControllerCreated(VolumePropertiesController
 void MainWindow::on_ComboBoxChanged()
 {
 
-   QString method = ui->comboBox->currentText();
+  QString method = ui->comboBox->currentText();
   if(m_controller!= NULL)
   {
     if(method == "Four windows")
@@ -162,6 +162,8 @@ void MainWindow::displayFourWindows(VolumePropertiesController *controller){
         rendererVOL->AddVolume(volume);
         rendererVOL->ResetCamera();
         renWin->AddRenderer(rendererVOL);
+        VtkTestWindow *vtkTestWindow = m_fourWindows->m_volume ;
+        connect(vtkTestWindow, &VtkTestWindow::fpsText, this, &MainWindow::on_fpsText);
  }
 }
 void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
@@ -187,17 +189,16 @@ void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
             vtkImageData* imageData = controller->imageData();
             imageData->GetScalarRange(range);
             vtkSmartPointer<vtkImageActor> imageActor = vtkSmartPointer<vtkImageActor>::New();
-
             imageActor->GetMapper()->SliceFacesCameraOn();
             imageActor->GetMapper()->SliceAtFocalPointOn();
-
             imageActor->GetMapper()->SetInputData(imageData);
             //
            /* vtkSmartPointer<vtkImageSlice> image = vtkSmartPointer<vtkImageSlice>::New();
             image->SetMapper(imageActor->GetMapper());
             image->GetProperty()->SetColorWindow(range[1] - range[0]);
             image->GetProperty()->SetColorLevel(0.5*(range[0] + range[1]));
-            image->GetProperty()->SetInterpolationTypeToNearest();*/
+            image->GetProperty()->SetInterpolationTypeToNearest();
+           */
             //
 
             vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
@@ -258,7 +259,7 @@ void MainWindow::displayOneWindow1(VolumePropertiesController *controller){
         rendererVOL->AddVolume(volume);
         rendererVOL->ResetCamera();
         renWin->AddRenderer(rendererVOL);
-
+        connect(m_imageActor, &ImageActorTest::fpsText, this, &MainWindow::on_fpsText);
 
         vtkSmartPointer<vtkRenderWindowInteractor> iren = vtkSmartPointer<vtkRenderWindowInteractor>::New();
         vtkSmartPointer<vtkInteractorStyleImage> style = vtkSmartPointer<vtkInteractorStyleImage>::New();
@@ -368,7 +369,13 @@ void MainWindow::displayOneWindow2(VolumePropertiesController *controller){
         rendererVOL2->AddVolume(volume2);
         rendererVOL2->ResetCamera();
         renWin2->AddRenderer(rendererVOL2);
-    }
+        connect(m_imageSclicer, &ImageSlicerTest::fpsText, this, &MainWindow::on_fpsText);
 
+    }
+}
+
+void MainWindow::on_fpsText(QString fpsString)
+{
+    this->statusBar()->showMessage(fpsString);
 
 }

@@ -63,10 +63,47 @@ VtkTestWindow::~VtkTestWindow()
 
 }
 
+void VtkTestWindow::showEvent(QShowEvent* )
+{
+    m_timer.start(1000.0 / 60.0);
+}
+
+void VtkTestWindow::hideEvent(QHideEvent* )
+{
+    m_timer.stop();
+}
 void VtkTestWindow::onTimer()
 {
     //this->GetRenderWindow()->Render();
+    /*this->update();
+    qDebug() << "Timer";*/
+
+    static int count = 0;
+    static const int count_max = 60;
+    static QTime fpsTimer;
+    static bool ft = true;
+    if(ft)
+    {
+        fpsTimer.start();
+        ft = false;
+    }
+
     this->update();
+
+    count += 1;
+
+    if(count == count_max)
+    {
+        count = 0;
+        double elapsedTimeSeconds = fpsTimer.elapsed() * 0.001;
+        double fps = count_max / elapsedTimeSeconds;
+        QString fpsString = QString::number(fps, 'f', 2) + " FPS";
+        //m_fpsText->SetInput(fpsText.toStdString().c_str());
+        m_fpsText = fpsString;
+        qDebug() << fpsString;
+        emit fpsText(m_fpsText);
+        fpsTimer.restart();
+    }
 }
 
 void VtkTestWindow::startAnimation()

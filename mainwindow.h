@@ -59,6 +59,7 @@ private slots:
     void on_removeDockWidget(const QString& windowTitle);
     void on_VolumePropertiesControllerCreated(VolumePropertiesController* controller);
     void on_ComboBoxChanged();
+    void on_fpsText(QString);
 
 private:
     Ui::MainWindow *ui;

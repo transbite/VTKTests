@@ -162,8 +162,8 @@ void MainWindow::displayFourWindows(VolumePropertiesController *controller){
         rendererVOL->AddVolume(volume);
         rendererVOL->ResetCamera();
         renWin->AddRenderer(rendererVOL);
-        VtkTestWindow *vtkTestWindow = m_fourWindows->m_volume ;
-        connect(vtkTestWindow, &VtkTestWindow::fpsText, this, &MainWindow::on_fpsText);
+       // VtkTestWindow *vtkTestWindow = m_fourWindows->m_volume ;
+        connect(m_fourWindows, &FourWindowsTest::fpsText, this, &MainWindow::on_fpsText);
  }
 }
 void MainWindow::displayOneWindow1(VolumePropertiesController *controller){

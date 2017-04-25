@@ -53,7 +53,7 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
 
     this->setAttribute(Qt::WA_DontCreateNativeAncestors);
 
-    connect(&m_timer, &QTimer::timeout, this, &VtkTestWindow::onTimer);
+    //connect(&m_timer, &QTimer::timeout, this, &VtkTestWindow::onTimer);
     //startAnimation();
 }
 
@@ -65,13 +65,14 @@ VtkTestWindow::~VtkTestWindow()
 
 void VtkTestWindow::showEvent(QShowEvent* )
 {
-    m_timer.start(1000.0 / 60.0);
+    //m_timer.start(1000.0 / 60.0);
 }
 
 void VtkTestWindow::hideEvent(QHideEvent* )
 {
-    m_timer.stop();
+   // m_timer.stop();
 }
+
 void VtkTestWindow::onTimer()
 {
     //this->GetRenderWindow()->Render();
@@ -100,7 +101,7 @@ void VtkTestWindow::onTimer()
         QString fpsString = QString::number(fps, 'f', 2) + " FPS";
         //m_fpsText->SetInput(fpsText.toStdString().c_str());
         m_fpsText = fpsString;
-        qDebug() << fpsString;
+        //qDebug() << fpsString;
         emit fpsText(m_fpsText);
         fpsTimer.restart();
     }

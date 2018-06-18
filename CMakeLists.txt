@@ -47,8 +47,8 @@ qt5_wrap_ui(FRMS_HDRS ${FRMS})
 
 add_executable(VTKTests MACOSX_BUNDLE ${SRCS} ${FRMS_HDRS})
 
-target_link_libraries(VTKTests ${VTK_LIBRARIES})
+target_link_libraries(VTKTests ${VTK_LIBRARIES} Qt5::Widgets Qt5::OpenGL Qt5::Sql Qt5::Concurrent)
 
 #qt5_use_modules(VTKTests Widgets OpenGL Sql WebKitWidgets Concurrent)
-qt5_use_modules(VTKTests Widgets OpenGL Sql Concurrent)
+#qt5_use_modules(VTKTests Widgets OpenGL Sql Concurrent)
 

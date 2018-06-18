@@ -10,8 +10,10 @@ VtkTestsImage2DWindow::VtkTestsImage2DWindow(QWidget *parent)
     ui.setupUi(this);
 
     m_imageViewer = vtkSmartPointer<vtkImageViewer2>::New();
-    m_imageViewer->SetRenderWindow(ui.vtkWidget->GetRenderWindow());
-    m_imageViewer->SetupInteractor(ui.vtkWidget->GetRenderWindow()->GetInteractor());
+    vtkRenderWindow *renWin = ui.vtkWidget->GetRenderWindow();
+    vtkRenderWindowInteractor *renWinInteractor =  renWin->GetInteractor();
+    m_imageViewer->SetRenderWindow(renWin);
+    m_imageViewer->SetupInteractor(renWinInteractor);
 }
 
 VtkTestsImage2DWindow::~VtkTestsImage2DWindow()

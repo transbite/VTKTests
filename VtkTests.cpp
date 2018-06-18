@@ -142,11 +142,14 @@ void VtkTests::executeCommand(const Commands &command, const QString &arguments)
     case Commands::LOAD_DICOM:
         {
             QSharedPointer<VolumePropertiesController> volContr = addDicomDirectory(arguments);
-            GraphWidget* graphWidget = volContr->graphWidget();
-            QString windowTitle = graphWidget->windowTitle();
-            m_volumeControllers.insert(windowTitle, volContr);
-            emit volumePropertiesControllerCreated(volContr.data());
-            emit createDockWidget(graphWidget);
+            if(volContr != nullptr)
+            {
+                GraphWidget* graphWidget = volContr->graphWidget();
+                QString windowTitle = graphWidget->windowTitle();
+                m_volumeControllers.insert(windowTitle, volContr);
+                emit volumePropertiesControllerCreated(volContr.data());
+                emit createDockWidget(graphWidget);
+            }
         }
         break;
     case Commands::LOAD_IMAGE:

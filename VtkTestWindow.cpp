@@ -17,7 +17,8 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
 //    ren1 = m_renderer;
 //    ren1->SetBackground( 0.1, 0.2, 0.4 );
 
-    vtkRenderWindow* renWin = this->GetRenderWindow();
+    vtkSmartPointer<vtkGenericOpenGLRenderWindow> renWin = vtkSmartPointer<vtkGenericOpenGLRenderWindow>::New();
+    this->SetRenderWindow(renWin);
     renWin->AddRenderer(m_renderer);
     vtkRenderer* ren = renWin->GetRenderers()->GetFirstRenderer();
     ren->SetBackground( 0.1, 0.2, 0.4 );
@@ -54,7 +55,7 @@ VtkTestWindow::VtkTestWindow(QWidget* parent)
     this->setAttribute(Qt::WA_DontCreateNativeAncestors);
 
     connect(&m_timer, &QTimer::timeout, this, &VtkTestWindow::onTimer);
-    //startAnimation();
+    startAnimation();
 }
 
 
@@ -66,7 +67,8 @@ VtkTestWindow::~VtkTestWindow()
 void VtkTestWindow::onTimer()
 {
     //this->GetRenderWindow()->Render();
-    this->update();
+    //this->update();
+    this->renderVTK();
 }
 
 void VtkTestWindow::startAnimation()

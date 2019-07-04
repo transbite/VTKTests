@@ -68,7 +68,8 @@ void VtkTestWindow::onTimer()
 {
     //this->GetRenderWindow()->Render();
     //this->update();
-    this->renderVTK();
+    //this->renderVTK();
+    this->GetRenderWindow()->Render();
 }
 
 void VtkTestWindow::startAnimation()

@@ -1,0 +1,48 @@
+<SuperBuild>
+    <WorkingDirectory>
+    </WorkingDirectory>
+    <!--
+        Take care of CMAKE_BUILD_TYPE and CMAKE_INSTALL_PREFIX
+    -->
+    <BuildType>
+        Debug
+    </BuildType>
+    <Projects>
+   
+   <!--     
+        <VTK>
+            <Checkout>
+                <repository>git://vtk.org/VTK.git</repository>
+                <branch>release</branch>
+            </Checkout>
+            <Configure>
+                <generator>Ninja</generator>
+                <variable name="BUILD_TESTING" type="BOOL">false</variable>
+                <variable name="VTK_Group_Qt" type="BOOL">false</variable>
+                <variable name="Module_vtkGUISupportQt" type="BOOL">true</variable>
+                <variable name="Module_vtkGUISupportQtOpenGL" type="BOOL">true</variable>
+                <variable name="Module_vtkGUISupportQtSQL" type="BOOL">false</variable>
+                <variable name="Module_vtkGUISupportQtWebkit" type="BOOL">false</variable>
+                <variable name="Module_vtkRenderingQt" type="BOOL">true</variable>
+                <variable name="Module_vtkViewsQt" type="BOOL">true</variable>
+            </Configure>
+            <Build>
+            </Build>
+        </VTK>
+    -->
+        
+        <VTKTests>
+            <Checkout>
+                <repository>git@github.com:transbite/VTKTests.git</repository>
+                <branch>master</branch>
+            </Checkout>
+            <Configure>
+                <generator>Ninja</generator>
+                <variable name="VTK_DIR" type="WORKINGDIRECTORYPATH">../Projects/VTK</variable>
+            </Configure>
+            <Build>
+            </Build>
+        </VTKTests>
+        
+    </Projects>
+</SuperBuild>

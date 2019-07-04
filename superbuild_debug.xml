@@ -1,0 +1,25 @@
+<SuperBuild>
+    <WorkingDirectory>
+        /home/catalin/Work/Tests
+    </WorkingDirectory>
+    <!--
+        Take care of CMAKE_BUILD_TYPE and CMAKE_INSTALL_PREFIX
+    -->
+    <BuildType>
+        Debug
+    </BuildType>
+    <Projects>
+        <VTKTests>
+            <Checkout>
+                <repository>git@github.com:transbite/VTKTests.git</repository>
+                <branch>master</branch>
+            </Checkout>
+            <Configure>
+                <generator>Ninja</generator>
+                <variable name="VTK_DIR" type="PATH">/home/catalin/Work/Projects/VTK/build_Debug</variable>
+            </Configure>
+            <Build>
+            </Build>
+        </VTKTests>
+    </Projects>
+</SuperBuild>
